@@ -47,7 +47,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/loginUI", method = RequestMethod.GET)
 	public String loginUI(){
-		return "loginUI";
+		return "01_login";
 	}
 	@RequestMapping(value = "/loginAction", method = RequestMethod.POST)
 	public String loginAction(HttpServletRequest request,Model model){
