@@ -29,3 +29,9 @@ INSERT INTO students  (student_id, major_code, password, email, student_name, bi
 INSERT INTO students  (student_id, major_code, password, email, student_name, birthday, phone, address, statement, entrance_date) VALUES ('20120002', 'A-003', '3333', 'cjfsud23@naver.com', '최철녕', '1993-10-13', '0109965957', '고양시 일산서구 일산2동', '재학', '2012-03-02');
 
 Subjets 샘플데이터
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-001', '컴퓨터개론', '전공필수', 3, '조병희', '월12화3', '엔코아301', 1);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-002', 'C언어프로그래밍', '전공필수', 3, '조철녕', '월45화4', '엔코아302', 1);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-003', '컴퓨터구조', '전공선택', 3, '최동일', '월56수6', '엔코아303', 2);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-004', 'C++프로그래밍', '전공선택', 3, '김병희', '화78화4', '엔코아304', 2);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-002', 'C언어프로그래밍', '전공필수', 3, '조철녕', '월45화4', '엔코아302', 1);
+
