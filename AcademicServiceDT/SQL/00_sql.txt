@@ -6,10 +6,10 @@
 최철녕 : ID 20120002, PW 3333
 
 Majors 테이블 생성
-CREATE TABLE majors (major_code VARCHAR2(10) NOT NULL PRIMARY KEY, major_name VARCHAR2(10), college VARCHAR2(10));
+CREATE TABLE majors (major_code VARCHAR2(10) NOT NULL PRIMARY KEY, major_name VARCHAR2(30), college VARCHAR2(20));
 
 Students 테이블 생성
-CREATE TABLE students (student_id VARCHAR2(10) NOT NULL PRIMARY KEY, major_code  VARCHAR2(10), password VARCHAR2(30), email VARCHAR2(30), student_name VARCHAR2(10), birthday DATE, phone VARCHAR2(15), address VARCHAR2(50), statement VARCHAR2(4), entrance_date DATE, CONSTRAINT major_code FOREIGN KEY (major_code) REFERENCES majors(major_code));
+CREATE TABLE students (student_id VARCHAR2(10) NOT NULL PRIMARY KEY, major_code  VARCHAR2(10), password VARCHAR2(30), email VARCHAR2(30), student_name VARCHAR2(10), birthday DATE, phone VARCHAR2(15), address VARCHAR2(100), statement VARCHAR2(4), entrance_date DATE, CONSTRAINT major_code FOREIGN KEY (major_code) REFERENCES majors(major_code));
 
 Subjects 테이블 생성
 CREATE TABLE subjects (subject_code VARCHAR2(10) NOT NULL PRIMARY KEY, subject_name VARCHAR2(30), category VARCHAR2(15), credit NUMBER(1), professor_name VARCHAR2(10), subject_time VARCHAR2(20), subject_place VARCHAR2(20), subject_grade NUMBER(1));
@@ -33,5 +33,11 @@ INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_n
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-002', 'C언어프로그래밍', '전공필수', 3, '조철녕', '월45화4', '엔코아302', 1);
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-003', '컴퓨터구조', '전공선택', 3, '최동일', '월56수6', '엔코아303', 2);
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-004', 'C++프로그래밍', '전공선택', 3, '김병희', '화78화4', '엔코아304', 2);
-INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-002', 'C언어프로그래밍', '전공필수', 3, '조철녕', '월45화4', '엔코아302', 1);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-005', '이산수학', '전공선택', 3, '조동일', '수45화3', '엔코아101', 2);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-006', '웹프로그래밍', '전공선택', 3, '최철녕', '금4화23', '엔코아102', 2);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-005', '자료구조', '전공필수', 3, '임다운', '목45금7', '엔코아101', 2);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-005', '이산수학', '전공선택', 3, '조동일', '수45화3', '엔코아101', 2);
+
+
+
 
