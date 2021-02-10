@@ -12,7 +12,7 @@ Students 테이블 생성
 CREATE TABLE students (student_id VARCHAR2(10) NOT NULL PRIMARY KEY, major_code  VARCHAR2(10), password VARCHAR2(30), email VARCHAR2(30), student_name VARCHAR2(10), birthday DATE, phone VARCHAR2(15), address VARCHAR2(50), statement VARCHAR2(4), entrance_date DATE, CONSTRAINT major_code FOREIGN KEY (major_code) REFERENCES majors(major_code));
 
 Subjects 테이블 생성
-CREATE TABLE subjects (subject_code VARCHAR2(10) NOT NULL PRIMARY KEY, subject_name VARCHAR2(10), category VARCHAR2(10), credit NUMBER(1), professor_name VARCHAR2(10), subject_time VARCHAR2(20), subject_place VARCHAR2(20), subject_grade NUMBER(1));
+CREATE TABLE subjects (subject_code VARCHAR2(10) NOT NULL PRIMARY KEY, subject_name VARCHAR2(15), category VARCHAR2(10), credit NUMBER(1), professor_name VARCHAR2(10), subject_time VARCHAR2(20), subject_place VARCHAR2(20), subject_grade NUMBER(1));
 
 Registers 테이블 생성
 CREATE TABLE registers (register_code VARCHAR2(10) NOT NULL PRIMARY KEY, subject_code VARCHAR2(10), student_id VARCHAR2(10), score NUMBER(5,2), year NUMBER(4), semester VARCHAR2(4), CONSTRAINT subject_code FOREIGN KEY (subject_code) REFERENCES subjects(subject_code), CONSTRAINT dstudent_id FOREIGN KEY (student_id) REFERENCES students(student_id));
