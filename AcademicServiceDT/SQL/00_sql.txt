@@ -46,7 +46,7 @@ INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_n
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-015', '네트워크프로그래밍', '전공선택', 3, '이수연', '수34화2', '엔코아306', 4);
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-016', '실용영어1', '교양필수', 3, '고현지', '금345', '엔코아205', 1);
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-017', '실용영어2', '교양필수', 3, '김혜정', '목234', '엔코아105', 1);
-INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-018', '선형대수학', '교양필수', 3, '임다운', '월12화5', '엔코아103', 1);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-017', '실용영어2', '교양필수', 3, '김혜정', '목234', '엔코아105', 1);
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-019', '통계학', '교양필수', 3, '강창기', '월234', '엔코아106', 2);
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-020', '영어회화', '교양필수', 3, '조동일', '수34목1', '엔코아105', 2);
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-021', '농구', '교양선택', 1, '김백준', '금2', '대강당', 0);
