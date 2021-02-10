@@ -1,0 +1,28 @@
+학과 코드 A-
+과목 코드 B-
+
+Majors 테이블 생성
+CREATE TABLE majors (major_code VARCHAR2(10) NOT NULL PRIMARY KEY, major_name VARCHAR2(10), college VARCHAR2(10));
+
+Students 테이블 생성
+CREATE TABLE students (student_id VARCHAR2(10) NOT NULL PRIMARY KEY, major_code  VARCHAR2(10), password VARCHAR2(30), email VARCHAR2(30), student_name VARCHAR2(10), birthday DATE, phone VARCHAR2(15), address VARCHAR2(50), statement VARCHAR2(4), entrance_date DATE, CONSTRAINT major_code FOREIGN KEY (major_code) REFERENCES majors(major_code));
+
+Subjects 테이블 생성
+CREATE TABLE subjects (subject_code VARCHAR2(10) NOT NULL PRIMARY KEY, subject_name VARCHAR2(10), category VARCHAR2(10), credit NUMBER(1), professor_name VARCHAR2(10), subject_time VARCHAR2(20), subject_place VARCHAR2(20), subject_grade NUMBER(1));
+
+Registers 테이블 생성
+CREATE TABLE registers (register_code VARCHAR2(10) NOT NULL PRIMARY KEY, subject_code VARCHAR2(10), student_id VARCHAR2(10), score NUMBER(5,2), year NUMBER(4), semester VARCHAR2(4), CONSTRAINT subject_code FOREIGN KEY (subject_code) REFERENCES subjects(subject_code), CONSTRAINT dstudent_id FOREIGN KEY (student_id) REFERENCES students(student_id));
+
+
+Majors 샘플데이터
+INSERT INTO majors (major_code, major_name, college) VALUES('A-001', '컴퓨터공학과', '공과대학');
+INSERT INTO majors (major_code, major_name, college) VALUES('A-002', '소프트웨어학과', '공과대학');
+INSERT INTO majors (major_code, major_name, college) VALUES('A-003', '미디어학과', '공과대학');
+
+Students 샘플데이터
+INSERT INTO students  (student_id, major_code, password, email, student_name, birthday, phone, address, statement, entrance_date) VALUES ('20120001', 'A-001', '1111', 'genius9329@naver.com', '김병희', '1992-02-09', '01037410209', '서울시 서초구 방배동', '재학', '2012-03-02');
+INSERT INTO students  (student_id, major_code, password, email, student_name, birthday, phone, address, statement, entrance_date) VALUES ('20150001', 'A-002', '2222', 'ehddkf0106@naver.com', '조동일', '1995-01-06', '01087237651', '서울시 은평구 역촌동', '재학', '2015-03-02');
+INSERT INTO students  (student_id, major_code, password, email, student_name, birthday, phone, address, statement, entrance_date) VALUES ('20120002', 'A-003', '3333', 'cjfsud23@naver.com', '최철녕', '1993-10-13', '0109965957', '고양시 일산서구 일산2동', '재학', '2012-03-02');
+
+Subjets 샘플데이터
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-001', '소프트웨어공학', '1111', 'genius9329@naver.com', '김병희', '1992-02-09', '01037410209', '서울시 서초구 방배동', '재학', '2012-03-02');
