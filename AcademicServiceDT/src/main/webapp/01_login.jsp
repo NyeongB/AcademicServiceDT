@@ -9,8 +9,9 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 <style>
-.login {
-	text-align: right;
+
+button {
+	color: #3498db;
 }
 </style>
 </head>
@@ -22,28 +23,33 @@
 			<div class="col-md-8">
 
 
-				<h3>DT 학사지원시스템</h3>
-				<h3 class="text-right">로그인</h3>
-
-				<hr>
-				<div class="login">
-
+				<jsp:include page="00_header.jsp"></jsp:include>
+				
+				
+				<div  align="right">
 
 					<form class="form-horizontal" action="loginAction">
-						<div class="form-group">
-							<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-							<div class="col-sm-10">
-								<input type="email" class="form-control" id="inputEmail3"
-									placeholder="Email">
+					<div class="row">
+					<div class="col-md-6"></div>
+					<div class="col-md-6">
+					<div class="form-group">
+							<label for="inputEmail3" class="col-sm-4 control-label" align="right">학번</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="id" name="id" placeholder="StudentId">
 							</div>
 						</div>
+
 						<div class="form-group">
-							<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3"
+							<label for="inputPassword3" class="col-sm-4 control-label">비밀번호</label>
+							<div class="col-sm-8" align="right">
+								<input type="password" class="form-control" id="pw" name="pw"
 									placeholder="Password">
 							</div>
-						</div>
+						</div></div>
+					</div>
+						
+						
+						<!-- 아이디 저장 -->
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
 								<div class="checkbox">
@@ -52,6 +58,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
 								<button type="submit" class="btn btn-primary">로그인</button>
@@ -61,7 +68,7 @@
 						</div>
 					</form>
 
-					
+
 				</div>
 
 

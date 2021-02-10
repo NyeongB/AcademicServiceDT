@@ -22,10 +22,7 @@
 			<div class="col-md-8">
 
 
-				<h3>DT 학사지원시스템</h3>
-				<h3 class="text-right">로그인</h3>
-
-				<hr>
+				<jsp:include page="00_header.jsp"></jsp:include>
 				<div class="login">
 
 
