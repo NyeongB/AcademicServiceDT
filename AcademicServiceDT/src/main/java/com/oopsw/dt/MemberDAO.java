@@ -1,5 +1,7 @@
 package com.oopsw.dt;
 
+import java.util.Collection;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -9,8 +11,9 @@ public interface MemberDAO {
 	public String login(@Param("memberId")String id, @Param("pw")String pw);
 //	public String login(String id, String pw) {
 //		if(id.equals("admin") && pw.equals("123"))
-//			return "°ü¸®ÀÚ";
+//			return "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 //		return null;
 //	}
+	public Collection<SubjectDTO> getAllSchedule();
 
 }

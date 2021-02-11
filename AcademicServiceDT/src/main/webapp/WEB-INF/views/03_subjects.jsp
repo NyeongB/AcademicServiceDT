@@ -69,18 +69,20 @@ hr {
     					
     					<tbody>
 						<tr>
-							<td>${tmp}</td>
-							<td>전공필수</td>
-							<td>A-001</td>
-							<td>데이터베이스</td>
-							<td>김병희</td>
-							<td>3</td>
-							<td>월23</td>
-							<td>팔달관 401호</td>
-							<td><button type="button" class="btn">신청</button></td>
+							<td>${tmp.subject_grade}</td>
+							<td>${tmp.category}</td>
+							<td>${tmp.subject_code}</td>
+							<td>${tmp.subject_name}</td>
+							<td>${tmp.professor_name}</td>
+							<td>${tmp.credit}</td>
+							<td>${tmp.subject_time}</td>
+							<td>${tmp.subject_place}</td>
+							<td><button type="button" class="btn" >신청</button></td>
 						</tr>
 
 					</tbody>
+					
+					
     					 
     				</c:forEach>
 					

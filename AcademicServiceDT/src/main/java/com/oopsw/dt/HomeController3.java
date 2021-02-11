@@ -1,6 +1,7 @@
 package com.oopsw.dt;
 
 import java.text.DateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
 
@@ -22,6 +23,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController3 {
 	
+	@Autowired
+	private MemberService memberService;
 	
+	@RequestMapping(value = "/subjects", method = RequestMethod.GET)
+	public String home(HttpServletRequest request, Model model) {
+		
+		
+		Collection<SubjectDTO> list = memberService.subjectList();
+		request.setAttribute("list", list);
+		
+		return "03_subjects";
+	}
 	
 }
