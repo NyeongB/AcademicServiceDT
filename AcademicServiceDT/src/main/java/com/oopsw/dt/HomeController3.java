@@ -26,9 +26,13 @@ public class HomeController3 {
 	@Autowired
 	private MemberService memberService;
 	
+	@Autowired
+	private PagingService pagingService;
+	
 	@RequestMapping(value = "/subjects", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, Model model) {
 		
+		int count = pagingService.count();
 		
 		Collection<SubjectDTO> list = memberService.subjectList();
 		request.setAttribute("list", list);
