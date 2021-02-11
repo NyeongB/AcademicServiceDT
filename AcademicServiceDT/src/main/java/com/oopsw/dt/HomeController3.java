@@ -32,8 +32,6 @@ public class HomeController3 {
 	@RequestMapping(value = "/subjects", method = RequestMethod.GET)
 	public String subjects(HttpServletRequest request, Model model) {
 		
-		//int count = pagingService.count();
-		
 		Collection<SubjectDTO> list = memberService.subjectList();
 		request.setAttribute("list", list);
 		
@@ -42,8 +40,6 @@ public class HomeController3 {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, Model model) {
-		
-		
 		
 		return "01_login";
 	}

@@ -14,7 +14,11 @@ public class MemberService3 {
 
 	
 	public Collection<SubjectDTO> subjectList() {
-		return memberDAO.getAllSchedule();
+		
+		Collection<SubjectDTO> list = memberDAO.getAllSchedule();
+		
+		return list;
 	}
 	
 }
+  
