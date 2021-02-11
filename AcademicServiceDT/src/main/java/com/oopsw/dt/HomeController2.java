@@ -21,7 +21,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class HomeController2 {
-private MemberService memberService;
+@Autowired
+private MemberService2 memberService;
 	
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController1.class);
@@ -32,10 +33,10 @@ private MemberService memberService;
 
 	@RequestMapping(value = "/loginAction", method = RequestMethod.GET)
 	public String loginAction(HttpServletRequest request,Model model){
-		String loginOK = memberService.login(request.getParameter("id"), request.getParameter("pw"));
-		if(loginOK !=null){
+		String studentName = memberService.login(request.getParameter("id"), request.getParameter("pw"));
+		if(studentName !=null){
 			HttpSession session=request.getSession(true);			
-			session.setAttribute("loginOK", loginOK);
+			session.setAttribute("studentName", studentName);
 			//model.addAttribute("loginOK", loginOK); 		
 			return "02_user_info";
 		}
