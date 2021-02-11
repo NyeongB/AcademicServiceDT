@@ -16,13 +16,17 @@ public class MemberService {
 	public String selectDate(){
 		return memberDAO.selectDate();
 	}
+	
 	public String login(String id, String pw) {
 		return memberDAO.login(id, pw);
 	}
+	
 	public Collection<SubjectDTO> subjectList() {
-		// TODO Auto-generated method stub
 		return memberDAO.getAllSchedule();
 	}
 	
+	public Collection<SubjectDTO> checkApplySubject() {
+		return memberDAO.getCheckApplysubject();
+	}
 	
 }
