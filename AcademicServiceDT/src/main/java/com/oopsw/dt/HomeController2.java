@@ -22,43 +22,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController2 {
 	
-	@Autowired
-	private MemberService memberService;
 	
-	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController2.class);
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
-	}
-	
-	@RequestMapping(value = "/loginUI", method = RequestMethod.GET)
-	public String loginUI(){
-		return "01_login";
-	}
-	@RequestMapping(value = "/loginAction", method = RequestMethod.POST)
-	public String loginAction(HttpServletRequest request,Model model){
-		String loginOK = memberService.login(request.getParameter("id"), request.getParameter("pw"));
-		if(loginOK !=null){
-			HttpSession session=request.getSession(true);			
-			session.setAttribute("loginOK", loginOK);
-			//model.addAttribute("loginOK", loginOK); 		
-			return "memberOK";
-		}
-		return "loginUI";
-	}
 	
 }
