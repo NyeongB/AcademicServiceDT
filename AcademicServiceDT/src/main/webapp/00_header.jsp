@@ -11,7 +11,7 @@
 float: left;
 }
 .first h3 {
-font-size: 35px;
+font-size: 40px;
 color: #3498db;
 font-weight: bold;
 }
@@ -20,7 +20,7 @@ float: right;
 
 }
 .second h3 {
-font-size: 35px;
+font-size: 40px;
 font-weight: bold;
 }
 .form {
