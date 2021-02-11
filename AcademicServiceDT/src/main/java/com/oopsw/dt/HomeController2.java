@@ -37,7 +37,7 @@ private MemberService2 memberService;
 		if(studentName !=null){
 			HttpSession session=request.getSession(true);			
 			session.setAttribute("studentName", studentName);
-			//model.addAttribute("loginOK", loginOK); 		
+			
 			return "02_user_info";
 		}
 		return "01_login";
