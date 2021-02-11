@@ -7,8 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MemberDAO {
-	public String selectDate();// throws Exception;	
-	public String login(@Param("memberId")String id, @Param("pw")String pw);
+	public String login(@Param("studentId")String id, @Param("password")String pw);
 //	public String login(String id, String pw) {
 //		if(id.equals("admin") && pw.equals("123"))
 //			return "������";
