@@ -12,13 +12,9 @@ public class MemberService {
 	@Autowired
 	private MemberDAO memberDAO;
 
-	public String login(String id, String pw) {
-		return memberDAO.login(id, pw);
-	}
 	
-	public Collection<SubjectDTO> subjectList() {
-		return memberDAO.getAllSchedule();
-	}
+	
+	
 	
 	public Collection<SubjectDTO> checkApplySubject() {
 		return memberDAO.getCheckApplysubject();

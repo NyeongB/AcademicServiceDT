@@ -6,8 +6,9 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MemberDAO {
+public interface MemberDAO3 {
 	
-	public Collection<SubjectDTO> getCheckApplysubject();
+	
+	public Collection<SubjectDTO> getAllSchedule();
 
 }

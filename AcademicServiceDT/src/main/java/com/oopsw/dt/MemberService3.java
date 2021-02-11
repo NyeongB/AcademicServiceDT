@@ -7,16 +7,14 @@ import org.springframework.stereotype.Service;
 
 
 @Service	
-public class MemberService2 {
-
+public class MemberService3 {
 	
 	@Autowired
-	private MemberDAO2 memberDAO;
+	private MemberDAO3 memberDAO;
 
-	public String login(String id, String pw) {
-		return memberDAO.login(id, pw);
+	
+	public Collection<SubjectDTO> subjectList() {
+		return memberDAO.getAllSchedule();
 	}
-	
-	
 	
 }
