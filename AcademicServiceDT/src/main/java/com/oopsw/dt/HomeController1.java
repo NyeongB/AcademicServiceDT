@@ -1,6 +1,7 @@
 package com.oopsw.dt;
 
 import java.text.DateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
 
@@ -25,40 +26,13 @@ public class HomeController1 {
 	@Autowired
 	private MemberService memberService;
 	
-	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController1.class);
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	@RequestMapping(value = "/my_subjects", method = RequestMethod.GET)
+	public String home(HttpServletRequest request, Model model) {
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		Collection<SubjectDTO> list = memberService.checkApplySubject();
+		request.setAttribute("list", list);
 		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
-	}
-	
-	@RequestMapping(value = "/loginUI", method = RequestMethod.GET)
-	public String loginUI(){
-		return "01_login";
-	}
-	@RequestMapping(value = "/loginAction", method = RequestMethod.POST)
-	public String loginAction(HttpServletRequest request,Model model){
-		String loginOK = memberService.login(request.getParameter("id"), request.getParameter("pw"));
-		if(loginOK !=null){
-			HttpSession session=request.getSession(true);			
-			session.setAttribute("loginOK", loginOK);
-			//model.addAttribute("loginOK", loginOK); 		
-			return "memberOK";
-		}
-		return "loginUI";
+		return "04_my_subjects";
 	}
 	
 }
