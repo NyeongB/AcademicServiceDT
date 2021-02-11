@@ -14,5 +14,7 @@ public interface MemberDAO {
 //		return null;
 //	}
 	public Collection<SubjectDTO> getAllSchedule();
+	
+	public Collection<SubjectDTO> getCheckApplysubject();
 
 }
