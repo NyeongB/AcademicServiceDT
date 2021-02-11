@@ -13,6 +13,6 @@
 		<select id="getCheckApplysubject" resultType="com.oopsw.dt.SubjectDTO"> 
 		SELECT s.subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade 
 		FROM registers r, subjects s 
-		WHERE r.subject_code = s.subject_code AND score IS NULL
+		WHERE r.student_id = '20120001' AND r.subject_code = s.subject_code
 	</select>
 </mapper>
