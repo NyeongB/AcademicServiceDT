@@ -9,5 +9,7 @@ import org.springframework.stereotype.Repository;
 public interface MemberDAO {
 	
 	public Collection<SubjectDTO> getCheckApplysubject();
+	
+	public Collection<ScoreDTO> getScoreInfo();
 
 }

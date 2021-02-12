@@ -1,4 +1,11 @@
 SELECT s.subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade 
 FROM registers r, subjects s 
 WHERE r.subject_code = s.subject_code AND score IS NULL;
- 
+
+SELECT sub.subject_code as subject_code, sub.subject_name as subject_name, r.score as score, sub.credit as credit, sub.category as categoty, sub.professor_name as professor_name
+FROM students stu, registers r, subjects sub
+WHERE stu.student_id = r.student_id AND r.subject_code = sub.subject_code AND r.year='2020' AND r.semester='1' AND stu.student_id='20120001'
+
+SELECT sub.subject_code as subject_code, sub.subject_name as subject_name, r.score as score, sub.credit as credit, sub.category as categoty, sub.professor_name as professor_name
+FROM students stu, registers r, subjects sub
+WHERE stu.student_id = r.student_id AND r.subject_code = sub.subject_code AND stu.student_id='20120001'

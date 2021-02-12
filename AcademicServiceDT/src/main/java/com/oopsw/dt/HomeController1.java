@@ -35,4 +35,13 @@ public class HomeController1 {
 		return "04_my_subjects";
 	}
 	
+	@RequestMapping(value = "/myScore", method = RequestMethod.GET)
+	public String home2(HttpServletRequest request, Model model) {
+		
+		Collection<ScoreDTO> list = memberService.scoreInfo();
+		request.setAttribute("list", list);
+		
+		return "05_myScore";
+	}
+	
 }

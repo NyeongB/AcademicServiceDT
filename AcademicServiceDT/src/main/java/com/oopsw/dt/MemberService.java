@@ -12,12 +12,12 @@ public class MemberService {
 	@Autowired
 	private MemberDAO memberDAO;
 
-	
-	
-	
-	
 	public Collection<SubjectDTO> checkApplySubject() {
 		return memberDAO.getCheckApplysubject();
+	}
+	
+	public Collection<ScoreDTO> scoreInfo() {
+		return memberDAO.getScoreInfo();
 	}
 	
 }
