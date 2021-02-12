@@ -36,6 +36,7 @@ hr {
 
 				<div class="container" style="text-align: right;">
 					<select class="form-control">
+						<option>전체학기</option>
 						<option>2020년 1학기</option>
 						<option>2020년 2학기</option>
 					</select>
@@ -73,8 +74,8 @@ hr {
 	    				</c:forEach>
 
 					</table>
-						취득학점 : 15 환산총점 : 52.5 평균평점 : 3.28 백분위 점수 : 86.8<br>
-					총취득학점 : 100 총환산총점 : 52.5 총평균평점 : 3.28 총백분위점수 : 86.8
+						취득학점 : 15 평균평점 : 3.28 백분위 점수 : 86.8 <br>
+					총취득학점 : 100 총평균평점 : 3.28 총백분위점수 : 86.8
 				</div>
 
 

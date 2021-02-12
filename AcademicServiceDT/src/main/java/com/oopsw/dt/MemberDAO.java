@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 public interface MemberDAO {
 	
 	public Collection<SubjectDTO> getCheckApplysubject();
+//	public Collection<ScoreDTO> getScoreInfo();
+	public String score(@Param("studentId")String id, @Param("regYear")String year, @Param("regSemester")String semester);
 	
-	public Collection<ScoreDTO> getScoreInfo();
-
 }

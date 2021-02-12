@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.support.SessionStatus;
 
 
 /**
@@ -27,7 +28,7 @@ public class HomeController1 {
 	private MemberService memberService;
 	
 	@RequestMapping(value = "/mySubjects", method = RequestMethod.GET)
-	public String home(HttpServletRequest request, Model model) {
+	public String checkApplySubject(HttpServletRequest request, Model model) {
 		
 		Collection<SubjectDTO> list = memberService.checkApplySubject();
 		request.setAttribute("list", list);
@@ -36,10 +37,18 @@ public class HomeController1 {
 	}
 	
 	@RequestMapping(value = "/myScore", method = RequestMethod.GET)
-	public String home2(HttpServletRequest request, Model model) {
+	public String scoreInfo(HttpServletRequest request, Model model) {
+		//String list = memberService.score(request.getParameter("id"), request.getParameter("year"), request.getParameter("semester"));
 		
-		Collection<ScoreDTO> list = memberService.scoreInfo();
-		request.setAttribute("list", list);
+		HttpSession session = request.getSession(true);
+		System.out.println("새로운 세션"+session.getAttribute("studentName"));
+		System.out.println("새로운 세션"+session.getAttribute("studentId"));
+		
+		//session.setAttribute("list", list);
+		
+		
+//		Collection<ScoreDTO> list = memberService.scoreInfo();
+//		request.setAttribute("list", list);
 		
 		return "05_myScore";
 	}

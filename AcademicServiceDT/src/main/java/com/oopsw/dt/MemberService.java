@@ -16,8 +16,12 @@ public class MemberService {
 		return memberDAO.getCheckApplysubject();
 	}
 	
-	public Collection<ScoreDTO> scoreInfo() {
-		return memberDAO.getScoreInfo();
+//	public Collection<ScoreDTO> scoreInfo() {
+//		return memberDAO.getScoreInfo();
+//	}
+	
+	public String score(String id, String year, String semester) {
+		return memberDAO.score(id, year, semester);
 	}
 	
 }
