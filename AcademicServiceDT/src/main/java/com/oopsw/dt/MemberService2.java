@@ -17,6 +17,15 @@ public class MemberService2 {
 		return memberDAO.login(id, pw);
 	}
 	
+	public String login2(String id, String pw) {
+		return memberDAO.login2(id, pw);
+	}
+
+	public UserInfoDTO userInfo(String id) {
+		
+		return memberDAO.userInfo(id);
+	}
+	
 	
 	
 }

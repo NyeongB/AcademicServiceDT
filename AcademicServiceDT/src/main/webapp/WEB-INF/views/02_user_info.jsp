@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.oopsw.dt.UserInfoDTO" %>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -45,19 +47,19 @@ clear : both;
 							이름
 						</th>
 						<td>
-							최철녕
-						</td>
-						<th>
-							학년
-						</th>
-						<td>
-							4
+							${UserInfoDTO.studentName }
 						</td>
 						<th>
 							이메일
 						</th>
 						<td>
-							ccnyeong@metanet.co.kr
+							${UserInfoDTO.email }
+						</td>
+						<th>
+							 
+						</th>
+						<td>
+							 
 						</td>
 					</tr>
 					<tr>
@@ -65,31 +67,31 @@ clear : both;
 							학과
 						</th>
 						<td>
-							미디어학과
+							${UserInfoDTO.major }
 						</td>
 						<th>
 							입학일자
 						</th>
 						<td>
-							2012
+							${UserInfoDTO entranceDate}
 						</td>
 						<th>
 							생년월일
 						</th>
 						<td>
-							931013
+							${UserInfoDTO birthday}
 						</td>	
 					</tr>
 					<tr>
 						<th>주소</th>
-						<td colspan="5">경기도 고양시 일산서구 고양대로 685(현대홈타운 1차) 105동 1001호</td>
+						<td colspan="5">${UserInfoDTO.address }</td>
 					</tr>
 					<tr>
 						<th>
 							학적상태
 						</th>
 						<td>
-							재학
+							${UserInfoDTO.statement }
 						</td>
 						<th>
 							주전공
