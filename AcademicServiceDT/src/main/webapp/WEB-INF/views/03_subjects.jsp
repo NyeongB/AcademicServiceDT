@@ -35,11 +35,10 @@ hr {
 				<br>
 				<hr>
 				<div>
+				<button type="button" class="btn btn-primary">전체과목</button>
 				<button type="button" class="btn btn-primary">전공과목</button>
 				<button type="button" class="btn btn-primary">교양과목</button>
-				<button type="button" class="btn btn-primary">타학과과목</button>
-				<a href="03_subjects.jsp"><button type="button" class="btn btn-primary">전체 시간표</button></a>
-				<a href="04_my_subjects.jsp"><button type="button" class="btn btn-primary">신청과목 조회</button></a>
+				<a href="mySubjects"><button type="button" class="btn btn-primary">신청과목 조회</button></a>
 				</div>
 				
 				
