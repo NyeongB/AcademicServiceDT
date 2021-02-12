@@ -4,8 +4,11 @@
 
 	<select id="login" resultType="java.lang.String"> 
 		select student_name from students where student_id=#{studentId} and password=#{password}
-	</select>	
-	<select id="userInfo" resultType="java.lang.String">
-		SELECT s.student_name, s.email, m.college, m.major_name, s.entrance_date, s.birthday, address, s.statement FROM students s, majors m WHERE s.student_id = #{studentName} AND s.major_code = m.major_code
+	</select>
+	<select id="login2" resultType="java.lang.String"> 
+		select student_id from students where student_id=#{studentId} and password=#{password}
+	</select>
+	<select id="userInfo" resultType="com.oopsw.dt.UserInfoDTO">
+		SELECT s.student_name AS studentName, s.email, m.college, m.major_name AS majorName, s.entrance_date AS entranceDate, s.birthday, address, s.statement FROM students s, majors m WHERE s.student_id = #{studentId} AND s.major_code = m.major_code
 	</select>
 </mapper>
