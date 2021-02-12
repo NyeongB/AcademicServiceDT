@@ -24,7 +24,7 @@ clear : both;
 </style>
 </head>
 <body>
-	
+	<%UserInfoDTO userInfoDTO = new UserInfoDTO(); %>
 	<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-2">
@@ -47,13 +47,13 @@ clear : both;
 							이름
 						</th>
 						<td>
-							${UserInfoDTO.studentName }
+							${userInfoDTO.studentName }
 						</td>
 						<th>
 							이메일
 						</th>
 						<td>
-							${UserInfoDTO.email }
+							${userInfoDTO.email }
 						</td>
 						<th>
 							 
@@ -67,37 +67,37 @@ clear : both;
 							학과
 						</th>
 						<td>
-							${UserInfoDTO.major }
+							${userInfoDTO.majorName }
 						</td>
 						<th>
 							입학일자
 						</th>
 						<td>
-							${UserInfoDTO entranceDate}
+							${userInfoDTO.entranceDate}
 						</td>
 						<th>
 							생년월일
 						</th>
 						<td>
-							${UserInfoDTO birthday}
+							${userInfoDTO.birthday}
 						</td>	
 					</tr>
 					<tr>
 						<th>주소</th>
-						<td colspan="5">${UserInfoDTO.address }</td>
+						<td colspan="5">${userInfoDTO.address }</td>
 					</tr>
 					<tr>
 						<th>
 							학적상태
 						</th>
 						<td>
-							${UserInfoDTO.statement }
+							${userInfoDTO.statement }
 						</td>
 						<th>
 							주전공
 						</th>
 						<td>
-							디지털미디어
+							${userInfoDTO.majorName }
 						</td>
 						<th>
 							부전공
