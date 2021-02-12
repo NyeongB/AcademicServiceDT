@@ -1,4 +1,4 @@
-package com.oopws.util;
+package com.oopsw.util;
 
 public class Paging
 {

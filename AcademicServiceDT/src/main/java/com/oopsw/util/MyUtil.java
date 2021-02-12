@@ -1,4 +1,4 @@
-package com.oopws.util;
+package com.oopsw.util;
 
 import java.io.UnsupportedEncodingException;
 import java.util.regex.Pattern;

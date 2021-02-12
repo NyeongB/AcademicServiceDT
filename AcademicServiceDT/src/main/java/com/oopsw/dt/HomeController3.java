@@ -32,7 +32,7 @@ public class HomeController3 {
 	@RequestMapping(value = "/subjects", method = RequestMethod.GET)
 	public String subjects(HttpServletRequest request, Model model) {
 		
-		Collection<SubjectDTO> list = memberService.subjectList();
+		Collection<SubjectDTO> list = memberService.subjectList(model, request);
 		request.setAttribute("list", list);
 		
 		return "03_subjects";
