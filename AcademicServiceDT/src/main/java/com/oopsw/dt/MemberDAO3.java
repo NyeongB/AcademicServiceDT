@@ -14,4 +14,6 @@ public interface MemberDAO3 {
 
 	public int getCount();
 
+	public String idPhoneCheck(@Param("name")String name, @Param("phone")String phone);
+
 }

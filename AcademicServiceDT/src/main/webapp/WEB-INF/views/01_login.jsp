@@ -7,7 +7,7 @@
 <title>로그인</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <style>
 
 button {
@@ -15,6 +15,13 @@ button {
 	
 }
 </style>
+<script type="text/javascript">
+
+$("#btn").click(function(){
+	alert("!");
+});
+
+</script>
 </head>
 <body>
 
@@ -63,8 +70,8 @@ button {
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
 								<button type="submit" class="btn btn-primary">로그인</button>
-								<button type="button" class="btn btn-primary">아이디찾기</button>
-								<button type="button" class="btn btn-primary">비밀번호찾기</button>
+								<a href="id"><button type="button" class="btn btn-primary" id="id">아이디찾기</button></a>
+								<a href="pw"><button type="button" class="btn btn-primary" id="pw">비밀번호찾기</button></a>
 							</div>
 						</div>
 					</form>

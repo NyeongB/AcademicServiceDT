@@ -25,4 +25,13 @@
 		FROM subjects
 	</select>
 	
+	
+	
+	<select id="idPhoneCheck" resultType="java.lang.String">
+		select student_id studentId from students where phone = #{phone} and student_name = #{name}
+	</select>
+	
+	
+	
+	
 </mapper>

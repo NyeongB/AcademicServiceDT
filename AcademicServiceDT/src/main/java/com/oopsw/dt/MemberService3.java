@@ -43,6 +43,13 @@ public class MemberService3 {
 		
 		return memberDAO.getAllSchedule(dto);
 	}
+
+
+	public String idPhoneCheck(String name, String phone) {
+		// TODO Auto-generated method stub
+		System.out.println("1");
+		return memberDAO.idPhoneCheck(name,phone);
+	}
 	
 }
   

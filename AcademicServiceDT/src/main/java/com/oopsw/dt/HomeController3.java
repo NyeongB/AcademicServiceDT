@@ -46,4 +46,27 @@ public class HomeController3 {
 	
 	
 	
+	@RequestMapping(value = "/idPhoneCheck", method = RequestMethod.GET)
+	public String idPhoneCheck(HttpServletRequest request,Model model){
+		String studentId = memberService.idPhoneCheck(request.getParameter("name"), request.getParameter("phone"));
+		if(studentId !=null){			
+			HttpSession session = request.getSession(true);
+			
+			session.setAttribute("studentId", studentId);
+			System.out.println(studentId);
+
+			return "08_certification";
+		}
+		return "01_login";
+	}
+	
+	@RequestMapping(value = "/id", method = RequestMethod.GET)
+	public String id(HttpServletRequest request,Model model){
+
+			return "07_find_id";
+	}
+	
+	
+	
+	
 }

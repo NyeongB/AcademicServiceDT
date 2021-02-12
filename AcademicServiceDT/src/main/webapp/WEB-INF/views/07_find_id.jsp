@@ -46,7 +46,7 @@
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">이름</label>
 							<div class="col-sm-5">
-								<input type="text" class="form-control" id="id" name="id"
+								<input type="text" class="form-control" id="id" name="name"
 									placeholder="studentId">
 							</div>
 						</div>
