@@ -33,29 +33,29 @@
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">이메일</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3"
-									placeholder="Password">
+								<input type="Email" class="form-control" id="inputPassword3"
+									placeholder="MDT@metanet.co.kr">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">주소</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3"
-									placeholder="Password">
+								<input type="text" class="form-control" id="inputPassword3"
+									placeholder="주소">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">비밀번호</label>
 							<div class="col-sm-10">
 								<input type="password" class="form-control" id="inputPassword3"
-									placeholder="Password">
+									placeholder="비밀번호">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">비밀번호 확인</label>
 							<div class="col-sm-10">
 								<input type="password" class="form-control" id="inputPassword3"
-									placeholder="Password">
+									placeholder="비밀번호 확인">
 							</div>
 						</div>
 <div class="form-group">
