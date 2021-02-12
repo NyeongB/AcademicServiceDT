@@ -38,17 +38,19 @@ public class HomeController1 {
 	
 	@RequestMapping(value = "/myScore", method = RequestMethod.GET)
 	public String scoreInfo(HttpServletRequest request, Model model) {
-		//String list = memberService.score(request.getParameter("id"), request.getParameter("year"), request.getParameter("semester"));
+		
 		
 		HttpSession session = request.getSession(true);
-		System.out.println("새로운 세션"+session.getAttribute("studentName"));
-		System.out.println("새로운 세션"+session.getAttribute("studentId"));
+		String id = (String) session.getAttribute("studentId");
+		//Collection<ScoreDTO> list = memberService.score(id, "2020", "1");
+		
+		Collection<ScoreDTO> list = memberService.score(id, request.getParameter("y"), request.getParameter("s"));
 		
 		//session.setAttribute("list", list);
 		
 		
 //		Collection<ScoreDTO> list = memberService.scoreInfo();
-//		request.setAttribute("list", list);
+		request.setAttribute("list", list);
 		
 		return "05_myScore";
 	}

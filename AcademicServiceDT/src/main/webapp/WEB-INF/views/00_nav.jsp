@@ -36,7 +36,7 @@ header nav ul li {
 				<ul>
 					<li><a href="userInfo">학생정보 조회</a></li>
 					<li><a href="subjects">수강신청</a></li>
-					<li><a href="myScore">성적조회</a></li>
+					<li><a href="myScore?y=2020&s=2">성적조회</a></li>
 					<li><a href="logout">로그아웃</a></li>
 					${studentName }님 환영합니다.
 				</ul>

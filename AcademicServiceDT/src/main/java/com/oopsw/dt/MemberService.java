@@ -20,7 +20,7 @@ public class MemberService {
 //		return memberDAO.getScoreInfo();
 //	}
 	
-	public String score(String id, String year, String semester) {
+	public Collection<ScoreDTO> score(String id, String year, String semester) {
 		return memberDAO.score(id, year, semester);
 	}
 	
