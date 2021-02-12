@@ -26,7 +26,7 @@ public class HomeController1 {
 	@Autowired
 	private MemberService memberService;
 	
-	@RequestMapping(value = "/my_subjects", method = RequestMethod.GET)
+	@RequestMapping(value = "/mySubjects", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, Model model) {
 		
 		Collection<SubjectDTO> list = memberService.checkApplySubject();
