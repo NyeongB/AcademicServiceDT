@@ -37,8 +37,8 @@ header nav ul li {
 					<li><a href="02_user_info.jsp">학생정보 조회</a></li>
 					<li><a href="03_subjects.jsp">수강신청</a></li>
 					<li><a href="05_myScore.jsp">성적조회</a></li>
-					<li><a href="">로그아웃</a></li>
-					조동일님 환영합니다.
+					<li><a href="logout">로그아웃</a></li>
+					${studentName }님 환영합니다.
 				</ul>
 			</nav>
 		</header>

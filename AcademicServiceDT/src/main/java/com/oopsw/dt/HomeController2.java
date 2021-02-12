@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 
 /**
@@ -23,8 +24,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController2 {
 @Autowired
 private MemberService2 memberService;
-	
-	
+
+	String studentName;
 	private static final Logger logger = LoggerFactory.getLogger(HomeController1.class);
 	
 	/**
@@ -33,15 +34,22 @@ private MemberService2 memberService;
 
 	@RequestMapping(value = "/loginAction", method = RequestMethod.GET)
 	public String loginAction(HttpServletRequest request,Model model){
-		String studentName = memberService.login(request.getParameter("id"), request.getParameter("pw"));
-		if(studentName !=null){
-			HttpSession session=request.getSession(true);			
+		studentName = memberService.login(request.getParameter("id"), request.getParameter("pw"));
+		if(studentName !=null){			
+			HttpSession session = request.getSession(true);
 			session.setAttribute("studentName", studentName);
 			
+			System.out.println(session.getAttribute("studentName"));
+
 			return "02_user_info";
 		}
 		return "01_login";
 	}
-	
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logout(HttpServletRequest request,Model model){
+		studentName = null;
+		System.out.println(studentName);
+		return "01_login";
+	}
 	
 }

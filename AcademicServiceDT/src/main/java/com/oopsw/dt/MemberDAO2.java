@@ -9,6 +9,4 @@ import org.springframework.stereotype.Repository;
 public interface MemberDAO2 {
 	public String login(@Param("studentId")String id, @Param("password")String pw);
 	
-	
-
 }
