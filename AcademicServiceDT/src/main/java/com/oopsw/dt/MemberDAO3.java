@@ -16,4 +16,8 @@ public interface MemberDAO3 {
 
 	public String idPhoneCheck(@Param("name")String name, @Param("phone")String phone);
 
+	public String findId(String name, String phone);
+
+	public String pwPhoneCheck(@Param("studentId")String studentId, @Param("phone")String phone);
+
 }

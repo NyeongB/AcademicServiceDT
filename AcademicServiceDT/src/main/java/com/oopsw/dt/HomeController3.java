@@ -18,76 +18,99 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.oopsw.util.Send;
 
-
 /**
  * Handles requests for the application home page.
  */
 @Controller
 public class HomeController3 {
-	
+
 	@Autowired
 	private MemberService3 memberService;
-	
-	@RequestMapping(value = "/subjects", method = RequestMethod.GET)
-	public String subjects(HttpServletRequest request, Model model) {
-		
-		Collection<SubjectDTO> list = memberService.subjectList(model, request);
-		request.setAttribute("list", list);
-		
-		return "03_subjects";
-	}
-	
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, Model model) {
-		
-		return "01_login";
-	}	
-	
-	@RequestMapping(value = "/idPhoneCheck", method = RequestMethod.GET)
-	public String idPhoneCheck(HttpServletRequest request,Model model){
-		String studentId = memberService.idPhoneCheck(request.getParameter("name"), request.getParameter("phone"));
-		if(studentId !=null){			
-			HttpSession session = request.getSession(true);
-			
-			session.setAttribute("studentId", studentId);
-			System.out.println(studentId);
 
-			return "08_certification";
-		}
 		return "01_login";
 	}
 	
+	@RequestMapping(value = "/loginMain", method = RequestMethod.GET)
+	public String loginMain(HttpServletRequest request, Model model) {
+
+		return "01_login";
+	}
+
 	@RequestMapping(value = "/id", method = RequestMethod.GET)
-	public String id(HttpServletRequest request,Model model){
+	public String id(HttpServletRequest request, Model model) {
 
 		return "07_find_id";
 	}
 	
-	@RequestMapping(value = "/printId", method = RequestMethod.GET)
-	public String printId(HttpServletRequest request,Model model){
+	@RequestMapping(value = "/pw", method = RequestMethod.GET)
+	public String pw(HttpServletRequest request, Model model) {
 
-		//studentName = memberService.findId(request.getParameter("name"), "010"+request.getParameter("num2"));
-		return "07_find_id_print";
+		return "07_find_pw";
 	}
 	
-	@RequestMapping(value = "/telcheck", method = RequestMethod.GET)
-	public String telcheck(Model model,HttpServletRequest request)
-	{
+
+	@RequestMapping(value = "/idPhoneCheck", method = RequestMethod.GET)
+	public String idPhoneCheck(HttpServletRequest request, Model model) {
 		
+		String name = request.getParameter("name");
+		String phone = "010"+request.getParameter("num2");
+		String studentId = memberService.idPhoneCheck(name, phone);
+		System.out.println(name+" "+phone);
+		if (studentId != null) {
+
+			request.setAttribute("studentId", studentId);
+			request.setAttribute("name", name);
+
+			return "07_find_id_print";
+		}
+		return "07_find_id";
+	}
+	
+	@RequestMapping(value = "/pwPhoneCheck", method = RequestMethod.GET)
+	public String pwPhoneCheck(HttpServletRequest request, Model model) {
+		
+		String studentId = request.getParameter("id");
+		String phone = "010"+request.getParameter("num2");
+		String pw = memberService.pwPhoneCheck(studentId, phone);
+		if (pw != null) {
+
+			request.setAttribute("studentId", studentId);
+			request.setAttribute("pw", pw);
+
+			return "07_find_pw_print";
+		}
+		return "07_find_pw";
+	}
+
+
+	@RequestMapping(value = "/telcheck", method = RequestMethod.GET)
+	public String telcheck(Model model, HttpServletRequest request) {
+
 		String view = null;
 		// 사용자가 입력한 휴대폰은 넘겨 받는다.
-		String tel = request.getParameter("tel");		
-		
-		// send() 메소드를 통해 리턴받은 난수 
+		String tel = request.getParameter("tel");
+
+		// send() 메소드를 통해 리턴받은 난수
 		String check = Send.send(tel.trim());
-		
-		// 난수를 담은 check를  model 에 저장 
-		model.addAttribute("check",check);
-		
+
+		// 난수를 담은 check를 model 에 저장
+		model.addAttribute("check", check);
+
 		view = "ajax";
-		
+
 		return view;
 	}
-	
-	
+
+	@RequestMapping(value = "/subjects", method = RequestMethod.GET)
+	public String subjects(HttpServletRequest request, Model model) {
+
+		Collection<SubjectDTO> list = memberService.subjectList(model, request);
+		request.setAttribute("list", list);
+
+		return "03_subjects";
+	}
+
 }

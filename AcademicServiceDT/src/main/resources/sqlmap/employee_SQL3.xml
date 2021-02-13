@@ -32,6 +32,9 @@
 	</select>
 	
 	
+	<select id="pwPhoneCheck" resultType="java.lang.String">
+		select password from students where phone = #{phone} and student_id = #{studentId}
+	</select>
 	
 	
 </mapper>

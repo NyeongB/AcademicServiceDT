@@ -47,8 +47,19 @@ public class MemberService3 {
 
 	public String idPhoneCheck(String name, String phone) {
 		// TODO Auto-generated method stub
-		System.out.println("1");
 		return memberDAO.idPhoneCheck(name,phone);
+	}
+
+
+	public String findId(String name, String phone) {
+		// TODO Auto-generated method stub
+		return memberDAO.findId(name,phone);
+	}
+
+
+	public String pwPhoneCheck(String studentId, String phone) {
+		// TODO Auto-generated method stub
+		return memberDAO.pwPhoneCheck(studentId,phone);
 	}
 	
 }

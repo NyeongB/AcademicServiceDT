@@ -93,16 +93,16 @@ function ajaxRequest()
 				<div class="login">
 					
 
-					<form action="idPhoneCheck" method="get">
+					<form action="pwPhoneCheck" method="get">
                   <br>
                      <!-- <input type="radio" name="phoneSearch" id="phoneSearch"><b>
                         휴대전화로 찾기</b> <br>
                      <br> -->
-                     <h3>아이디 찾기</h3>
+                     <h3>비밀번호 찾기</h3>
 
                      <div class="form-group">
-                        <label for="name"> 이름 </label> <input type="text"
-                           class="form-control" id="name" placeholder="이름" name="name">
+                        <label for="name"> 학번 </label> <input type="text"
+                           class="form-control" id="name" placeholder="이름" name="id">
                      </div>
                      <br>
                      <br>
