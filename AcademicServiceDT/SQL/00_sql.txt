@@ -59,3 +59,21 @@ INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_n
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-028', '생활속의심리학', '교양선택', 3, '김병희', 'OCU', 'OCU', 0);
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-029', '지중해문화산책', '교양선택', 3, '최철녕', 'OCU', 'OCU', 0);
 INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-030', '문학과상상력', '교양선택', 3, '조동일', 'OCU', '엔코아105', 0);
+
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-031', '프레젠테이션기법', '교양선택', 2, '유수봉', '월34', '엔코아101', 0);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-032', '채플', '교양필수', 1, '김은호', '목5', '대강당', 0);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-033', '사고와표현', '교양필수', 4, '김중철', '월23화56', '엔코아303', 1);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-034', '컴퓨터활용', '교양선택', 2, '안병태', '수23', '엔코아201', 0);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-035', '기독교개론', '교양필수', 2, '김은호', '금34', '엔코아101', 1);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-036', 'ESP:Critical Thinking', '교양필수', 2, '유지은', '금78', '엔코아405', 2);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-037', 'ESP:Creative Thinking', '교양필수', 2, '유지은', '금56', '엔코아405', 2);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-038', '신화이야기', '교양선택', 1, '윤덕규', '금7', '엔코아503', 0);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-039', '창의적읽기', '교양선택', 2, '김성희', '월78', '엔코아106', 0);
+INSERT INTO subjects  (subject_code, subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade) VALUES ('B-040', '자바스크립트', '교양선택', 2, '유수봉', '수34','엔코아203', 0);
+
+UPDATE subjects SET credit=2, subject_time='금56', subject_code='B-016' WHERE subject_name='실용영어1'
+UPDATE subjects SET credit=2, subject_time='목23', subject_code='B-017' WHERE subject_name='실용영어2'
+UPDATE subjects SET credit=2, subject_time='목23', subject_code='B-036' WHERE subject_name='실용영어2'
+
+SELECT * FROM subjects;
+
