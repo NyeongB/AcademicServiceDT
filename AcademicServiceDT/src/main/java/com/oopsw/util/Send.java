@@ -25,7 +25,7 @@ public class Send
 		params.put("to", tel); // 수신번호
 		params.put("from", "01099659257"); // 발신번호
 		params.put("type", "SMS"); // Message type ( SMS, LMS, MMS, ATA )
-		params.put("text", "[BANANA401]인증번호는\n" + str + "입니다."); // 문자내용
+		params.put("text", "[DT 학사지원시스템]인증번호는\n" + str + "입니다."); // 문자내용
 		params.put("app_version", "JAVA SDK v1.2"); // application name and version
 
 		try

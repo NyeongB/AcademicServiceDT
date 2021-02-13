@@ -63,6 +63,12 @@ public class HomeController3 {
 			return "07_find_id";
 	}
 	
+	@RequestMapping(value = "/printId", method = RequestMethod.GET)
+	public String printId(HttpServletRequest request,Model model){
+
+		return "07_find_id";
+	}
+	
 	@RequestMapping(value = "/telcheck", method = RequestMethod.GET)
 	public String telcheck(Model model,HttpServletRequest request)
 	{
