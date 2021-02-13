@@ -32,8 +32,7 @@ $(function(){
 		}
 		else
 		{
-			location.href("changeInfo?phone="+phone+"&email="+email+"&address="+address+"&password="+password);
-			location.href("02_user_info.jsp");
+			location.href="changeInfo?phone="+phone+"&email="+email+"&address="+address+"&password="+password;
 		}
 		
 	});

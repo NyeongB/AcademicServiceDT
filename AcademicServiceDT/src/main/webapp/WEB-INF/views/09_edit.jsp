@@ -14,7 +14,30 @@
 <script type="text/javascript">
 
 $(function(){
-	var passwordCheck = $("#passwordCheck").val();
+	
+	
+	$("#update").click(function(){
+		var phone = $("#phone").val();
+		var email = $("#email").val();
+		var address = $("#address").val();
+		var password = $("#password").val();
+		var passwordCheck = $("#passwordCheck").val();
+		
+		
+		
+		
+		if(password != passwordCheck)
+		{
+			alert('비밀번호가 같지 않습니다.');
+		}
+		else
+		{
+			location.href="changeInfo?phone="+phone+"&email="+email+"&address="+address+"&password="+password;
+		}
+		
+	});
+	
+	
 });
 </script>
 
@@ -31,7 +54,7 @@ $(function(){
 
 				<hr>
 				<div class="login">
-					<form class="form-horizontal" action="changeInfo">
+					<form class="form-horizontal">
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">핸드폰번호</label>
 							<div class="col-sm-10">
@@ -71,7 +94,7 @@ $(function(){
 						<div class="form-group">
 							<hr>
 							<div class="col-sm-offset-2 col-sm-10">
-								<button type="submit" class="btn btn-primary" id="update">변경</button>
+								<button type="button" class="btn btn-primary" id="update">변경</button>
 							</div>
 						</div>
 					</form>
