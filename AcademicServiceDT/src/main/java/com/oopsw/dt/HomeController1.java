@@ -42,6 +42,18 @@ public class HomeController1 {
 		return "04_my_subjects";
 	}
 	
+	@RequestMapping(value = "/delete", method = RequestMethod.GET) // 신청과목조회
+	public String delete(HttpServletRequest request, Model model) {
+		
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+		
+		Collection<SubjectDTO> list = memberService.check(id);
+		request.setAttribute("list", list);
+		
+		return "04_my_subjects";
+	}
+	
 	@RequestMapping(value = "/myScore", method = RequestMethod.GET) // 한 학기성적
 	public String scoreInfo(HttpServletRequest request, Model model) {
 		

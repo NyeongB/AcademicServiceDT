@@ -29,17 +29,20 @@ hr {
 
 </style>
 
+
+
 <script type="text/javascript">
 
-$(document).on("click","button[name=delRow]",function(){
-    
-    var row = $(this).parent().parent();
-    
-    row.remove();
-    
-});
+   
+   function del(num)
+   {
+      if(confirm('정말 삭제하시겠습니까?'))
+      location.href='delete?registerCode='+num;
+   }
 
 </script>
+
+
 </head>
 <body>
 
@@ -71,7 +74,7 @@ $(document).on("click","button[name=delRow]",function(){
 						</tr>
 					</thead>
 					
-					<c:forEach var="tmp" items="${list}">
+					<c:forEach var="tmp" items="${list}" varStatus="status">
     				
     				<tbody>	
     					
@@ -84,7 +87,17 @@ $(document).on("click","button[name=delRow]",function(){
 							<td>${tmp.credit}</td>
 							<td>${tmp.subject_time}</td>	
 							<td>${tmp.subject_place}</td>
-							<td><button name = "delRow">삭제</button></td>
+							<td>
+                           <button type="button" class="btn btn-default" onclick='del(${tmp.register_code})'>
+                           Delete
+                           </button>
+                        </td>
+							
+							<%-- 
+							<input type="text" value="${tmp.register_code}">
+							<td><button type="button" onclick="d(t${status.index})"  id="${status.index }">삭제</button></td>
+							 --%>
+							
 						</tr>
 					</tbody>
 												

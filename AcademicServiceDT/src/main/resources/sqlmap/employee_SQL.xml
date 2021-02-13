@@ -3,7 +3,7 @@
 <mapper namespace="com.oopsw.dt.MemberDAO"> 
 
 		<select id="check" resultType="com.oopsw.dt.SubjectDTO"> 
-			SELECT s.subject_name, category, s.subject_code, credit, professor_name, subject_time, subject_place, subject_grade 
+			SELECT s.subject_name, category, s.subject_code, credit, professor_name, subject_time, subject_place, subject_grade, register_code 
 			FROM registers r, subjects s 
 			WHERE r.student_id = #{studentId} AND r.subject_code = s.subject_code
 		</select>

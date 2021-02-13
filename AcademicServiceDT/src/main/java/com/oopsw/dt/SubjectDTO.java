@@ -12,6 +12,14 @@ public class SubjectDTO {
 	private String subject_time;
 	private String subject_place;
 	
+	private String register_code;
+	
+	public String getRegister_code() {
+		return register_code;
+	}
+	public void setRegister_code(String register_code) {
+		this.register_code = register_code;
+	}
 	public String getSubject_grade() {
 		return subject_grade;
 	}
