@@ -112,7 +112,7 @@ clear : both;
 			
 			<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
-								<a href="09_edit.jsp"><button type="submit" class="btn btn-primary">학생정보 변경</button></a>
+								<a href="edit"><button type="submit" class="btn btn-primary">학생정보 변경</button></a>
 							</div>
 						</div>
 		

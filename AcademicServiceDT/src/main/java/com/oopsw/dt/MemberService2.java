@@ -24,6 +24,11 @@ public class MemberService2 {
 		
 		return memberDAO.userInfo(id);
 	}
+
+	public int changeInfo(String id, String phone, String email, String address, String password) {
+		System.out.println("22"+phone);
+		return memberDAO.changeInfo(id, phone, email, address, password);
+	}
 	
 	
 	

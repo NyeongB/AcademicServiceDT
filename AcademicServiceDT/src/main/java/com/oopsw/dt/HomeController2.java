@@ -56,7 +56,6 @@ private MemberService2 memberService;
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(HttpServletRequest request,Model model){
 		studentName = null;
-		System.out.println(studentName);
 		return "01_login";
 	}
 	
@@ -72,11 +71,16 @@ private MemberService2 memberService;
 	@RequestMapping(value = "/changeInfo", method = RequestMethod.GET)
 	public String changeInfo(HttpServletRequest request, Model model) {
 		
-		//UserInfoDTO userInfoDTO = memberService.userInfo(studentId);
-		//request.setAttribute("userInfoDTO", userInfoDTO);
-		//System.out.println(userInfoDTO);
+		Integer num = memberService.changeInfo(studentId, request.getParameter("phone"), request.getParameter("email"), request.getParameter("address"), request.getParameter("password"));
 		UserInfoDTO userInfoDTO = memberService.userInfo(studentId);
 		request.setAttribute("userInfoDTO", userInfoDTO);
+		System.out.println(request.getParameter("phone"));
+		System.out.println(num);
 		return "02_user_info";
 	}
+	
+	@RequestMapping(value = "/edit", method = RequestMethod.GET)
+	public String edit(HttpServletRequest request, Model model) {
+		return "09_edit";
+	}	
 }
