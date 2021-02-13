@@ -28,9 +28,7 @@ hr {
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				
-				
 				<jsp:include page="00_nav.jsp"></jsp:include>
-				
 				
 				<br>
 				<hr>
@@ -74,10 +72,26 @@ hr {
     					 
     				</c:forEach>
 				</table>
+				
+				<table class="table table-bordered">
+					<colgroup>
+						<col width = "20%" />
+					</colgroup>
+					<c:set var = "sum" value = "0" />
+					<c:forEach var="tmp" items="${list}">
+					<tbody>
+						<c:set var = "sum" value = "${sum+tmp.credit}"/>
+					</tbody>
+					</c:forEach>
+						<tr>
+							<td>수강신청학점내역</td>
+							<td>현재신청학점 : <c:out value = "${sum}"/></td>
+							<td>신청최대학점 : 21</td>
+						</tr>
+						
+				</table>
+				
 				</div>
-				
-				
-
 
 			</div>
 			<div class="col-md-2"></div>
