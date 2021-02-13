@@ -27,4 +27,8 @@ public class MemberService {
 	public Collection<ScoreDTO> scoreAll(String id) {
 		return memberDAO.scoreAll(id);
 	}
+
+	public Integer delete(String register_code) {
+		return memberDAO.delete(register_code);
+	}
 }

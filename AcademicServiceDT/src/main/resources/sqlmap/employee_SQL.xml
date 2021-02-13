@@ -7,6 +7,10 @@
 			FROM registers r, subjects s 
 			WHERE r.student_id = #{studentId} AND r.subject_code = s.subject_code
 		</select>
+		
+		<delete id="delete"> 
+			DELETE FROM registers WHERE register_code = #{registerCode}
+		</delete>
  
 		<select id="score" resultType="com.oopsw.dt.ScoreDTO"> 
 			SELECT sub.subject_code as subject_code, sub.subject_name as subject_name, r.score as score, sub.credit as credit, sub.category as category, sub.professor_name as professor_name

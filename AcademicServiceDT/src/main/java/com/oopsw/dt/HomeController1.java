@@ -42,8 +42,10 @@ public class HomeController1 {
 		return "04_my_subjects";
 	}
 	
-	@RequestMapping(value = "/delete", method = RequestMethod.GET) // 신청과목조회
+	@RequestMapping(value = "/delete", method = RequestMethod.GET) // 신청과목삭제
 	public String delete(HttpServletRequest request, Model model) {
+		
+		Integer num = memberService.delete(request.getParameter("registerCode"));
 		
 		HttpSession session = request.getSession(true);
 		String id = (String) session.getAttribute("studentId");
