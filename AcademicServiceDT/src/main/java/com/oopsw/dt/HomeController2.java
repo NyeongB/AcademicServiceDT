@@ -68,4 +68,15 @@ private MemberService2 memberService;
 		System.out.println(userInfoDTO);
 		return "02_user_info";
 	}
+	
+	@RequestMapping(value = "/changeInfo", method = RequestMethod.GET)
+	public String changeInfo(HttpServletRequest request, Model model) {
+		
+		//UserInfoDTO userInfoDTO = memberService.userInfo(studentId);
+		//request.setAttribute("userInfoDTO", userInfoDTO);
+		//System.out.println(userInfoDTO);
+		UserInfoDTO userInfoDTO = memberService.userInfo(studentId);
+		request.setAttribute("userInfoDTO", userInfoDTO);
+		return "02_user_info";
+	}
 }

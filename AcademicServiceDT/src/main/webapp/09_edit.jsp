@@ -20,45 +20,48 @@
 
 
 				<h3>DT 학사관리시스템</h3>
-				<h3 class="text-right">로그인</h3>
+				<h3 class="text-right">학생정보변경</h3>
 
 				<hr>
-				학생정보 변경
 				<div class="login">
-					<form class="form-horizontal" action="loginAction">
-
-
-
-
+					<form class="form-horizontal" action="changeInfo">
+						<div class="form-group">
+							<label for="inputPassword3" class="col-sm-2 control-label">핸드폰번호</label>
+							<div class="col-sm-10">
+								<input type="Tel" class="form-control" id="inputPassword3" name="tel"
+									placeholder="010-1234-5789">
+							</div>
+						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">이메일</label>
 							<div class="col-sm-10">
-								<input type="Email" class="form-control" id="inputPassword3"
+								<input type="Email" class="form-control" id="inputPassword3" name="email"
 									placeholder="MDT@metanet.co.kr">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">주소</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputPassword3"
+								<input type="text" class="form-control" id="inputPassword3" name="address"
 									placeholder="주소">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">비밀번호</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3"
+								<input type="password" class="form-control" id="inputPassword3" name="password"
 									placeholder="비밀번호">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">비밀번호 확인</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3"
+								<input type="password" class="form-control" id="inputPassword3" name="passwordCheck"
 									placeholder="비밀번호 확인">
 							</div>
 						</div>
 <div class="form-group">
+<hr>
 							<div class="col-sm-offset-2 col-sm-10">
 								<button type="submit" class="btn btn-primary">확인</button>
 							</div>
