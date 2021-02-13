@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
 <mapper namespace="com.oopsw.dt.MemberDAO"> 
 
-		<select id="getCheckApplysubject" resultType="com.oopsw.dt.SubjectDTO"> 
-			SELECT s.subject_name, category, credit, professor_name, subject_time, subject_place, subject_grade 
+		<select id="check" resultType="com.oopsw.dt.SubjectDTO"> 
+			SELECT s.subject_name, category, s.subject_code, credit, professor_name, subject_time, subject_place, subject_grade 
 			FROM registers r, subjects s 
-			WHERE r.student_id = '20120001' AND r.subject_code = s.subject_code
+			WHERE r.student_id = #{studentId} AND r.subject_code = s.subject_code
 		</select>
  
 		<select id="score" resultType="com.oopsw.dt.ScoreDTO"> 

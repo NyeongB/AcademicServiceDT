@@ -47,7 +47,7 @@ hr {
 				<table class="table table-bordered">
 					<thead>
 						<tr>
-							<th>학년</th>
+							<th>수강학년</th>
 							<th>이수구분</th>
 							<th>과목코드</th>
 							<th>과목명</th>

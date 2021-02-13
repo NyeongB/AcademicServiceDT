@@ -27,34 +27,34 @@ public class HomeController1 {
 	@Autowired
 	private MemberService memberService;
 	
-	@RequestMapping(value = "/mySubjects", method = RequestMethod.GET)
+	@RequestMapping(value = "/mySubjects", method = RequestMethod.GET) // 신청과목조회
 	public String checkApplySubject(HttpServletRequest request, Model model) {
 		
-		Collection<SubjectDTO> list = memberService.checkApplySubject();
+//		Collection<SubjectDTO> list = memberService.checkApplySubject();
+//		request.setAttribute("list", list);
+		
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+		
+		Collection<SubjectDTO> list = memberService.check(id);
 		request.setAttribute("list", list);
 		
 		return "04_my_subjects";
 	}
 	
-	@RequestMapping(value = "/myScore", method = RequestMethod.GET)
+	@RequestMapping(value = "/myScore", method = RequestMethod.GET) // 한 학기성적
 	public String scoreInfo(HttpServletRequest request, Model model) {
-		
 		
 		HttpSession session = request.getSession(true);
 		String id = (String) session.getAttribute("studentId");
-//		Collection<ScoreDTO> list = memberService.score(id, "2020", "1");
 		
 		Collection<ScoreDTO> list = memberService.score(id, request.getParameter("y"), request.getParameter("s"));
 		request.setAttribute("list", list);
-		
-//		Collection<ScoreDTO> list2 = memberService.scoreAll(id);
-//		request.setAttribute("list", list2);
-		
+
 		return "05_myScore";
 	}
-	@RequestMapping(value = "/myScores", method = RequestMethod.GET)
+	@RequestMapping(value = "/myScores", method = RequestMethod.GET) // 전체성적
 	public String scoreInfo2(HttpServletRequest request, Model model) {
-		
 		
 		HttpSession session = request.getSession(true);
 		String id = (String) session.getAttribute("studentId");
@@ -65,7 +65,7 @@ public class HomeController1 {
 		return "05_myScore";
 	}
 	
-	@RequestMapping(value = "/start", method = RequestMethod.GET)
+	@RequestMapping(value = "/start", method = RequestMethod.GET) // 첫화면
 	public String scoreInfo3(HttpServletRequest request, Model model) {
 
 		return "05_myScore";
