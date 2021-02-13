@@ -15,15 +15,15 @@
 
 $(function(){
 	$("#btn1").click(function(){
-		location.href="subjects";
+		location.href="subjects?flag=0";
 	});
 	
 	$("#btn2").click(function(){
-		location.href="subjects?j=전공";
+		location.href="subjects2";
 	});
 	
 	$("#btn3").click(function(){
-		location.href="subjects?j=교양";
+		location.href="subjects3";
 	});
 });
 

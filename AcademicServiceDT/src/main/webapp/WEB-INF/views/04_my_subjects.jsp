@@ -88,7 +88,7 @@ hr {
 							<td>${tmp.subject_time}</td>	
 							<td>${tmp.subject_place}</td>
 							<td>
-                           <button type="button" class="btn btn-default" onclick='del(${tmp.register_code})'>
+                           <button type="button" class="btn btn-danger" onclick='del(${tmp.register_code})'>
                            Delete
                            </button>
                         </td>
