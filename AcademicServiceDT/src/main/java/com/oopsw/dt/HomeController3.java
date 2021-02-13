@@ -106,8 +106,26 @@ public class HomeController3 {
 
 	@RequestMapping(value = "/subjects", method = RequestMethod.GET)
 	public String subjects(HttpServletRequest request, Model model) {
-
+		
 		Collection<SubjectDTO> list = memberService.subjectList(model, request);
+		request.setAttribute("list", list);
+
+		return "03_subjects";
+	}
+	
+	@RequestMapping(value = "/subjects2", method = RequestMethod.GET)
+	public String subjects2(HttpServletRequest request, Model model) {
+		
+		Collection<SubjectDTO> list = memberService.subjectList2(model, request);
+		request.setAttribute("list", list);
+
+		return "03_subjects";
+	}
+	
+	@RequestMapping(value = "/subjects3", method = RequestMethod.GET)
+	public String subjects3(HttpServletRequest request, Model model) {
+		
+		Collection<SubjectDTO> list = memberService.subjectList3(model, request);
 		request.setAttribute("list", list);
 
 		return "03_subjects";

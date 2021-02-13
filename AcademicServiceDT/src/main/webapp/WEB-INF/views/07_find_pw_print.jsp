@@ -29,7 +29,7 @@
 					<form class="form-horizontal" action="loginAction">
 
 						<h1>학번 확인</h1>
-						<h3>${studentId}님의 비밀번호는 "${pw }"입니다.</h3>
+						<h3>${studentId}님의 비밀번호는 "${pw }"입니다.</h3> 
 
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">

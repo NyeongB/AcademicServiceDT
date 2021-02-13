@@ -20,11 +20,57 @@
 		
 	</select>
 	
+	<select id="getAllSchedule2" resultType="com.oopsw.dt.SubjectDTO"> 
+	
+	<![CDATA[
+		SELECT *
+		FROM
+		(
+		SELECT DATA.*, ROWNUM AS RNUM FROM
+		(
+		SELECT subject_grade, category, subject_code, subject_name,
+		 professor_name, credit, subject_time, subject_place FROM subjects where category like '전공%'
+		)DATA)
+		WHERE #{start} <= RNUM AND RNUM <= #{end}
+		]]>
+	
+	
+		
+	</select>
+	
+	<select id="getAllSchedule3" resultType="com.oopsw.dt.SubjectDTO"> 
+	
+	<![CDATA[
+		SELECT *
+		FROM
+		(
+		SELECT DATA.*, ROWNUM AS RNUM FROM
+		(
+		SELECT subject_grade, category, subject_code, subject_name,
+		 professor_name, credit, subject_time, subject_place FROM subjects where category like '교양%'
+		)DATA)
+		WHERE #{start} <= RNUM AND RNUM <= #{end}
+		]]>
+	
+	
+		
+	</select>
+	
+	
 	<select id="getCount" resultType="java.lang.Integer">
 		SELECT COUNT(*)
 		FROM subjects
 	</select>
 	
+	<select id="getCount2" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM subjects where category like '전공%'
+	</select>
+	
+	<select id="getCount3" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM subjects where category like '교양%'
+	</select>
 	
 	
 	<select id="idPhoneCheck" resultType="java.lang.String">
