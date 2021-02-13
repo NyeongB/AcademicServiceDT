@@ -58,28 +58,31 @@ $(function(){
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">핸드폰번호</label>
 							<div class="col-sm-10">
-								<input type="Tel" class="form-control" id="phone"
+								<input type="Tel" style="width:400px;" class="form-control" id="phone"
 									name="phone" placeholder="010-1234-5789">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">이메일</label>
 							<div class="col-sm-10">
-								<input type="Email" class="form-control" id="email"
+								<input type="Email" style="width:400px;" style="width:400px;" class="form-control" id="email"
 									name="email" placeholder="MDT@metanet.co.kr">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">주소</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="address"
+								<input type="text" style="width:400px;" class="form-control" id="address"
 									name="address" placeholder="주소">
 							</div>
 						</div>
+					
+						<hr>
+						
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">비밀번호</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="password"
+								<input type="password" style="width:300px;" class="form-control" id="password"
 									name="password" placeholder="비밀번호">
 							</div>
 						</div>
@@ -87,7 +90,7 @@ $(function(){
 							<label for="inputPassword3" class="col-sm-2 control-label">비밀번호
 								확인</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="passwordCheck"
+								<input type="password" style="width:300px;" class="form-control" id="passwordCheck"
 									name="passwordCheck" placeholder="비밀번호 확인">
 							</div>
 						</div>

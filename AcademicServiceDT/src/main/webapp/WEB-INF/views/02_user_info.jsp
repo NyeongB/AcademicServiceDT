@@ -9,7 +9,7 @@
 <title>학생정보 조회</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	
+
 <style>
 .login {
 	text-align: right;
@@ -58,20 +58,19 @@ hr {
 							<td>${userInfoDTO.entranceDate}</td>
 						</tr>
 						<tr>
-						<th>학적상태</th>
+							<th>학적상태</th>
 							<td>${userInfoDTO.statement }</td>
 							<th>주소</th>
 							<td colspan="3">${userInfoDTO.address }</td>
-							
+
 						</tr>
 
 					</tbody>
 				</table>
 
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-						<a href="edit"><button type="submit" class="btn btn-primary">학생정보
-								변경</button></a>
+				<div class="form-group" text-align:center;>
+					<div class="col-sm-offset-2 col-sm-10 mButton gCenter">
+						<a href="edit"><button type="submit" class="btn btn-primary">학생정보변경</button></a>
 					</div>
 				</div>
 			</div>

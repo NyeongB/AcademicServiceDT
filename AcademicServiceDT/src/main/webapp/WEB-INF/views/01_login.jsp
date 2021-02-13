@@ -43,7 +43,7 @@ $("#btn").click(function(){
 					<div class="form-group">
 							<label for="inputEmail3" class="col-sm-4 control-label" align="right">학번</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" id="id" name="id" placeholder="StudentId">
+								<input type="text" class="form-control" id="id" name="id" placeholder="학번">
 							</div>
 						</div>
 
@@ -51,7 +51,7 @@ $("#btn").click(function(){
 							<label for="inputPassword3" class="col-sm-4 control-label">비밀번호</label>
 							<div class="col-sm-8" align="right">
 								<input type="password" class="form-control" id="pw" name="pw"
-									placeholder="Password">
+									placeholder="비밀번호">
 							</div>
 						</div></div>
 					</div>
@@ -70,7 +70,7 @@ $("#btn").click(function(){
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
 								<button type="submit" class="btn btn-primary">로그인</button>
-								<a href="id"><button type="button" class="btn btn-primary" id="id">아이디찾기</button></a>
+								<a href="id"><button type="button" class="btn btn-primary" id="id">학번찾기</button></a>
 								<a href="pw"><button type="button" class="btn btn-primary" id="pw">비밀번호찾기</button></a>
 							</div>
 						</div>
