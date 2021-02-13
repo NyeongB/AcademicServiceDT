@@ -60,13 +60,14 @@ public class HomeController3 {
 	@RequestMapping(value = "/id", method = RequestMethod.GET)
 	public String id(HttpServletRequest request,Model model){
 
-			return "07_find_id";
+		return "07_find_id";
 	}
 	
 	@RequestMapping(value = "/printId", method = RequestMethod.GET)
 	public String printId(HttpServletRequest request,Model model){
 
-		return "07_find_id";
+		//studentName = memberService.findId(request.getParameter("name"), "010"+request.getParameter("num2"));
+		return "07_find_id_print";
 	}
 	
 	@RequestMapping(value = "/telcheck", method = RequestMethod.GET)

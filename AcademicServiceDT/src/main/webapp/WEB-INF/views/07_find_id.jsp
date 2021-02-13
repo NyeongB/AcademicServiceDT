@@ -93,7 +93,7 @@ function ajaxRequest()
 				<div class="login">
 					
 
-					<form role="form" class="form-inline" id="phoneForm" action="idcheckfind.action" method="get">
+					<formaction="printId" method="get">
                   <br>
                      <!-- <input type="radio" name="phoneSearch" id="phoneSearch"><b>
                         휴대전화로 찾기</b> <br>
