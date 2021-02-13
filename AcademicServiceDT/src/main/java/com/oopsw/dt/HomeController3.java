@@ -26,9 +26,6 @@ public class HomeController3 {
 	@Autowired
 	private MemberService3 memberService;
 	
-	/*@Autowired
-	private PagingService pagingService;*/
-	
 	@RequestMapping(value = "/subjects", method = RequestMethod.GET)
 	public String subjects(HttpServletRequest request, Model model) {
 		
@@ -42,9 +39,7 @@ public class HomeController3 {
 	public String home(HttpServletRequest request, Model model) {
 		
 		return "01_login";
-	}
-	
-	
+	}	
 	
 	@RequestMapping(value = "/idPhoneCheck", method = RequestMethod.GET)
 	public String idPhoneCheck(HttpServletRequest request,Model model){

@@ -37,6 +37,7 @@ $(function(){
 				<button type="button" class="btn btn-primary" id="btn1">전체과목</button>
 				<button type="button" class="btn btn-primary" id="btn2">전공과목</button>
 				<button type="button" class="btn btn-primary" id="btn3">교양과목</button>
+				
 				<a href="mySubjects"><button type="button" class="btn btn-primary">신청과목 조회</button></a>
 				</div>
 
