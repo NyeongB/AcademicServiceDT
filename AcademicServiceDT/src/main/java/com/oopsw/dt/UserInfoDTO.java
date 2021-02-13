@@ -61,12 +61,4 @@ public class UserInfoDTO {
 	public void setStatement(String statement) {
 		this.statement = statement;
 	}
-	@Override
-	public String toString() {
-		return "UserInfoDTO [studentName=" + studentName + ", email=" + email + ", college=" + college + ", majorName="
-				+ majorName + ", entranceDate=" + entranceDate + ", birthday=" + birthday + ", address=" + address
-				+ ", statement=" + statement + "]";
-	}
-	
-	
 }

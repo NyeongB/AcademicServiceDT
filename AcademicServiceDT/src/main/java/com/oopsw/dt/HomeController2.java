@@ -38,8 +38,6 @@ private MemberService2 memberService;
 		
 			session.setAttribute("studentName", studentName);
 			session2.setAttribute("studentId", studentId);
-			System.out.println(session.getAttribute("studentName"));
-			System.out.println(session.getAttribute("studentId"));
 
 			return userInfo(request, model);
 		}
