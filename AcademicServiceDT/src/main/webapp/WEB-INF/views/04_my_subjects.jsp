@@ -1,10 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
+
+<!-- function deleteRow(rownum) {
+
+  const table = document.getElementById('apply');
+  const newRow = table.deleteRow(rownum);
+} -->
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>신청과목 조회</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 
 <style>
 .login {
@@ -20,6 +28,18 @@ hr {
 
 
 </style>
+
+<script type="text/javascript">
+
+$(document).on("click","button[name=delRow]",function(){
+    
+    var row = $(this).parent().parent();
+    
+    row.remove();
+    
+});
+
+</script>
 </head>
 <body>
 
@@ -52,8 +72,9 @@ hr {
 					</thead>
 					
 					<c:forEach var="tmp" items="${list}">
+    				
+    				<tbody>	
     					
-    					<tbody>
 						<tr>
 							<td>${tmp.subject_grade}</td>
 							<td>${tmp.category}</td>
@@ -61,15 +82,12 @@ hr {
 							<td>${tmp.subject_name}</td>
 							<td>${tmp.professor_name}</td>
 							<td>${tmp.credit}</td>
-							<td>${tmp.subject_time}</td>
+							<td>${tmp.subject_time}</td>	
 							<td>${tmp.subject_place}</td>
-							<td><button type="button" class="btn" >삭제</button></td>
+							<td><button name = "delRow">삭제</button></td>
 						</tr>
-
 					</tbody>
-					
-					
-    					 
+												
     				</c:forEach>
 				</table>
 				
