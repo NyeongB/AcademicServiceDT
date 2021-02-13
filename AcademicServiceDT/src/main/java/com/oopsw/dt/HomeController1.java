@@ -42,17 +42,34 @@ public class HomeController1 {
 		
 		HttpSession session = request.getSession(true);
 		String id = (String) session.getAttribute("studentId");
-		//Collection<ScoreDTO> list = memberService.score(id, "2020", "1");
+//		Collection<ScoreDTO> list = memberService.score(id, "2020", "1");
 		
 		Collection<ScoreDTO> list = memberService.score(id, request.getParameter("y"), request.getParameter("s"));
+		request.setAttribute("list", list);
 		
-		//session.setAttribute("list", list);
+//		Collection<ScoreDTO> list2 = memberService.scoreAll(id);
+//		request.setAttribute("list", list2);
+		
+		return "05_myScore";
+	}
+	@RequestMapping(value = "/myScores", method = RequestMethod.GET)
+	public String scoreInfo2(HttpServletRequest request, Model model) {
 		
 		
-//		Collection<ScoreDTO> list = memberService.scoreInfo();
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+
+		Collection<ScoreDTO> list = memberService.scoreAll(id);
 		request.setAttribute("list", list);
 		
 		return "05_myScore";
 	}
+	
+	@RequestMapping(value = "/start", method = RequestMethod.GET)
+	public String scoreInfo3(HttpServletRequest request, Model model) {
+
+		return "05_myScore";
+	}
+	
 	
 }

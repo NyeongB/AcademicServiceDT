@@ -14,12 +14,10 @@
 			WHERE stu.student_id = r.student_id AND r.subject_code = sub.subject_code AND r.year= #{regYear} AND r.semester= #{regSemester} AND stu.student_id= #{studentId}
 		</select>
 		
-		<!--  
-		<select id="getAllScoreInfo" resultType="com.oopsw.dt.ScoreDTO"> 
+		<select id="scoreAll" resultType="com.oopsw.dt.ScoreDTO"> 
 			SELECT sub.subject_code as subject_code, sub.subject_name as subject_name, r.score as score, sub.credit as credit, sub.category as category, sub.professor_name as professor_name
 			FROM students stu, registers r, subjects sub
-			WHERE stu.student_id = r.student_id AND r.subject_code = sub.subject_code AND stu.student_id= '20120001'
+			WHERE stu.student_id = r.student_id AND r.subject_code = sub.subject_code AND stu.student_id= #{studentId}
 		</select>
--->
 		 
 </mapper>

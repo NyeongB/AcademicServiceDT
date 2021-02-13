@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>성적조회</title>
@@ -35,10 +36,11 @@ hr {
 
 
 				<div class="container" style="text-align: right;">
-					<select class="form-control">
-						<option>전체학기</option>
-						<option>2020년 1학기</option>
-						<option>2020년 2학기</option>
+					<select class="form-control" onchange = "location.href=this.value">
+						<option value>선택</option>
+						<option value = http://localhost:5432/dt/myScores>전체학기</option>
+						<option value = "http://localhost:5432/dt/myScore?y=2020&s=1">2020학년도 1학기</option>
+						<option value = "http://localhost:5432/dt/myScore?y=2020&s=2">2020학년도 2학기</option>
 					</select>
 				</div>
 				
@@ -74,8 +76,10 @@ hr {
 	    				</c:forEach>
 
 					</table>
-						취득학점 : 15 평균평점 : 3.28 백분위 점수 : 86.8 <br>
+					<!-- 
+					취득학점 : 15 평균평점 : 3.28 백분위 점수 : 86.8 <br>
 					총취득학점 : 100 총평균평점 : 3.28 총백분위점수 : 86.8
+					 -->
 				</div>
 
 

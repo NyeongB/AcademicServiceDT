@@ -24,4 +24,7 @@ public class MemberService {
 		return memberDAO.score(id, year, semester);
 	}
 	
+	public Collection<ScoreDTO> scoreAll(String id) {
+		return memberDAO.scoreAll(id);
+	}
 }
