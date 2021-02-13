@@ -36,7 +36,6 @@ hr {
 				<br>
 				<hr>
 
-				<p>학생정보</p>
 				<image>
 				<table class="table table-bordered">
 
@@ -68,7 +67,7 @@ hr {
 					</tbody>
 				</table>
 
-				<div class="form-group" text-align:center;>
+				<div class="form-group" align="right">
 					<div class="col-sm-offset-2 col-sm-10 mButton gCenter">
 						<a href="edit"><button type="submit" class="btn btn-primary">학생정보변경</button></a>
 					</div>
