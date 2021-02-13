@@ -34,13 +34,7 @@ hr {
 				
 				<br>
 				<hr>
-				<div>
-				<button type="button" class="btn btn-primary">전체과목</button>
-				<button type="button" class="btn btn-primary">전공과목</button>
-				<button type="button" class="btn btn-primary">교양과목</button>
-				
-				<a href="mySubjects"><button type="button" class="btn btn-primary">신청과목 조회</button></a>
-				</div>
+				<jsp:include page="00_buttons.jsp"></jsp:include>
 				
 				<br>
 				<div>

@@ -7,7 +7,7 @@
 <title>아이디/ 비밀번호 인증</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <style>
 .login {
 	text-align: right;
