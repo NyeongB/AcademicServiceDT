@@ -16,6 +16,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.oopsw.util.Send;
+
 
 /**
  * Handles requests for the application home page.
@@ -61,7 +63,24 @@ public class HomeController3 {
 			return "07_find_id";
 	}
 	
-	
+	@RequestMapping(value = "/telcheck", method = RequestMethod.GET)
+	public String telcheck(Model model,HttpServletRequest request)
+	{
+		
+		String view = null;
+		// 사용자가 입력한 휴대폰은 넘겨 받는다.
+		String tel = request.getParameter("tel");		
+		
+		// send() 메소드를 통해 리턴받은 난수 
+		String check = Send.send(tel.trim());
+		
+		// 난수를 담은 check를  model 에 저장 
+		model.addAttribute("check",check);
+		
+		view = "ajax";
+		
+		return view;
+	}
 	
 	
 }
