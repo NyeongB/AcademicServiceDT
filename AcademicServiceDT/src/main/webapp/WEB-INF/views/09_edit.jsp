@@ -7,10 +7,17 @@
 <title>학생정보 변경</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <style>
 </style>
 </head>
+<script type="text/javascript">
+
+$(function(){
+	var passwordCheck = $("#passwordCheck").val();
+});
+</script>
+
 <body>
 
 	<div class="container-fluid">
@@ -28,28 +35,28 @@
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">핸드폰번호</label>
 							<div class="col-sm-10">
-								<input type="Tel" class="form-control" id="inputPassword3"
+								<input type="Tel" class="form-control" id="phone"
 									name="phone" placeholder="010-1234-5789">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">이메일</label>
 							<div class="col-sm-10">
-								<input type="Email" class="form-control" id="inputPassword3"
+								<input type="Email" class="form-control" id="email"
 									name="email" placeholder="MDT@metanet.co.kr">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">주소</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputPassword3"
+								<input type="text" class="form-control" id="address"
 									name="address" placeholder="주소">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword3" class="col-sm-2 control-label">비밀번호</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3"
+								<input type="password" class="form-control" id="password"
 									name="password" placeholder="비밀번호">
 							</div>
 						</div>
@@ -57,14 +64,14 @@
 							<label for="inputPassword3" class="col-sm-2 control-label">비밀번호
 								확인</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3"
+								<input type="password" class="form-control" id="passwordCheck"
 									name="passwordCheck" placeholder="비밀번호 확인">
 							</div>
 						</div>
 						<div class="form-group">
 							<hr>
 							<div class="col-sm-offset-2 col-sm-10">
-								<button type="submit" class="btn btn-primary">확인</button>
+								<button type="submit" class="btn btn-primary" id="update">변경</button>
 							</div>
 						</div>
 					</form>
