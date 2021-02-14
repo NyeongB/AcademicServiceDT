@@ -83,6 +83,7 @@ hr {
     				<tbody>	
     					
 						<tr>
+						<td>
 							<c:choose>
 									<c:when test="${tmp.subject_grade == 0}">전체</c:when>
 									<c:otherwise>${tmp.subject_grade}</c:otherwise>
@@ -96,8 +97,7 @@ hr {
 							<td>${tmp.subject_place}</td>
 							<td>
                            <button type="button" class="btn btn-danger" onclick='del(${tmp.register_code})'>
-                            Delete
-                           </button>
+											삭제</button>
                         </td>
 							
 							<%-- 
