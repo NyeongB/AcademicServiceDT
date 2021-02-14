@@ -64,7 +64,7 @@ function change(style) {
 				<br>
 				<hr>
 
-				<div class="container" align = "right" style= "margin-right: 200px;">
+				<div class="container" align = "left">
 					<select class="form-control"  style="width:200px;" onchange = "location.href=this.value">
 						<option value>선택</option>
 						<option value = "http://localhost:5432/dt/myScores">전체학기</option>
@@ -126,21 +126,16 @@ function change(style) {
 						</tr>
 						
 					<c:set var = "sum2" value = "0" />
-					<c:forEach var="tmp2" items="${list2}">
+					<c:forEach var="tmp2" items="${list}">
 					<tbody>
-						<c:set var = "sum2" value = "${sum2+tmp2.scoreChange}"/>
+						<c:set var = "sum2" value = "${total}"/>
 					</tbody>
 					</c:forEach>
 						<tr width = "20%">
-							<td>백분위 점수 : <c:out value = "${sum2}"/></td>
+							<td>평점 : <c:out value = "${sum2}" /></td>
 						</tr>	
 						
 				</table>
-						
-					<!-- 
-					취득학점 : 15 평균평점 : 3.28 백분위 점수 : 86.8 <br>
-					총취득학점 : 100 총평균평점 : 3.28 총백분위점수 : 86.8
-					 -->
 				</div>
 
 

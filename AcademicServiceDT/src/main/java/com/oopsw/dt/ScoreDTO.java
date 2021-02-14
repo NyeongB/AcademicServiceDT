@@ -10,9 +10,16 @@ public class ScoreDTO {
 	private String credit;
 	private String category;
 	private String professor_name;
-
-	private String scoreChange;
 	
+	private String scoreChange;
+	private String averageChange;
+	
+	public String getAverageChange() {
+		return averageChange;
+	}
+	public void setAverageChange(String averageChange) {
+		this.averageChange = averageChange;
+	}
 	public String getYear() {
 		return year;
 	}

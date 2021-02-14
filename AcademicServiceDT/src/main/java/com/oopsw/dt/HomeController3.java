@@ -1,15 +1,11 @@
 package com.oopsw.dt;
 
-import java.text.DateFormat;
 import java.util.Collection;
-import java.util.Date;
-import java.util.Locale;
+
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -137,9 +133,6 @@ public class HomeController3 {
 		String id = (String) session.getAttribute("studentId");
 		System.out.println(id+" "+request.getParameter("subjectCode"));
 		int result = memberService.insert(request.getParameter("subjectCode"),id);
-		
-		
-		
 		
 		Collection<SubjectDTO> list = memberService.subjectList(model, request);
 		request.setAttribute("list", list);
