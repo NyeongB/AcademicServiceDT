@@ -74,6 +74,16 @@ public class HomeController1 {
 		String id = (String) session.getAttribute("studentId");
 
 		Collection<ScoreDTO> list = memberService.scoreAll(id);
+		
+		//성적 계산
+		for(ScoreDTO dto : list)
+		{
+			int score = Integer.parseInt(dto.getScore());
+			
+			dto.setScoreChange(calScore(score));
+			
+		}
+		
 		request.setAttribute("list", list);
 		
 		return "05_myScore";
@@ -85,5 +95,32 @@ public class HomeController1 {
 		return "05_myScore";
 	}
 	
+	public String calScore(int score){ // 학점변환
+		
+		String result = "";
+		
+		if(score > 95 && score <= 100){
+			result = "A+";
+		}
+		else if(score > 90 && score <= 95){
+			result = "A0";
+		}
+		else if(score > 85 && score <= 90){
+			result = "B+";
+		}
+		else if(score > 80 && score <= 85){
+			result = "B0";
+		}
+		else if(score > 75 && score <= 80){
+			result = "C+";
+		}
+		else if(score > 70 && score <= 75){
+			result = "C0";
+		}
+		else {
+			result = "F";
+		}
+		return result;
+	}
 	
 }
