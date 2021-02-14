@@ -45,6 +45,7 @@ private MemberService2 memberService;
 	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(HttpServletRequest request,Model model){
+		studentId = null;
 		studentName = null;
 		return "01_login";
 	}

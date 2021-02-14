@@ -9,9 +9,13 @@ import com.oopsw.util.*;
 @Repository
 public interface MemberDAO3 {
 	
+	//전체 과목
+	public Collection<SubjectDTO> getAllSchedule(@Param("start")int start, @Param("end")int end, @Param("studentId")String id);
+	// 전공
+	public Collection<SubjectDTO> getAllSchedule2(@Param("start")int start, @Param("end")int end, @Param("studentId")String id);
+	// 교양
+	public Collection<SubjectDTO> getAllSchedule3(@Param("start")int start, @Param("end")int end, @Param("studentId")String id);
 	
-	public Collection<SubjectDTO> getAllSchedule(IndexDTO dto);
-
 	public int getCount();
 
 	public String idPhoneCheck(@Param("name")String name, @Param("phone")String phone);
@@ -19,12 +23,6 @@ public interface MemberDAO3 {
 	public String findId(String name, String phone);
 
 	public String pwPhoneCheck(@Param("studentId")String studentId, @Param("phone")String phone);
-
-	// 전공
-	public Collection<SubjectDTO> getAllSchedule2(IndexDTO dto);
-
-	// 교양
-	public Collection<SubjectDTO> getAllSchedule3(IndexDTO dto);
 
 	public int getCount2();
 	public int getCount3();

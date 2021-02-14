@@ -3,10 +3,12 @@ package com.oopsw.dt;
 import java.util.Collection;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import com.oopsw.util.*;
 
@@ -50,10 +52,12 @@ public class MemberService3 {
 		IndexDTO dto = new IndexDTO();
 		dto.setStart(start);
 		dto.setEnd(end);
-
+		
+		
 		request.setAttribute("pageIndexList", pageIndexList);
-
-		return memberDAO.getAllSchedule(dto);
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+		return memberDAO.getAllSchedule(start,end, id);
 	}
 
 	public Collection<SubjectDTO> subjectList2(Model model, HttpServletRequest request) {
@@ -76,8 +80,9 @@ public class MemberService3 {
 		dto.setEnd(end);
 
 		request.setAttribute("pageIndexList", pageIndexList);
-
-		return memberDAO.getAllSchedule2(dto);
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+		return memberDAO.getAllSchedule2(start,end, id);
 	}
 
 	public Collection<SubjectDTO> subjectList3(Model model, HttpServletRequest request) {
@@ -100,8 +105,9 @@ public class MemberService3 {
 		dto.setEnd(end);
 
 		request.setAttribute("pageIndexList", pageIndexList);
-
-		return memberDAO.getAllSchedule3(dto);
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+		return memberDAO.getAllSchedule3(start,end, id);
 	}
 
 	public int insert(String subjectCode, String studentId) {

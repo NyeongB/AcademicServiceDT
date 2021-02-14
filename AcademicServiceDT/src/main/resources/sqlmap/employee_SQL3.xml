@@ -12,6 +12,7 @@
 		(
 		SELECT subject_grade, category, subject_code, subject_name,
 		 professor_name, credit, subject_time, subject_place FROM subjects
+		 WHERE subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
 		)DATA)
 		WHERE #{start} <= RNUM AND RNUM <= #{end}
 		]]>
@@ -29,7 +30,8 @@
 		SELECT DATA.*, ROWNUM AS RNUM FROM
 		(
 		SELECT subject_grade, category, subject_code, subject_name,
-		 professor_name, credit, subject_time, subject_place FROM subjects where category like '전공%'
+		 professor_name, credit, subject_time, subject_place FROM subjects 
+		 where category like '전공%' AND subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
 		)DATA)
 		WHERE #{start} <= RNUM AND RNUM <= #{end}
 		]]>
@@ -48,6 +50,7 @@
 		(
 		SELECT subject_grade, category, subject_code, subject_name,
 		 professor_name, credit, subject_time, subject_place FROM subjects where category like '교양%'
+		 AND subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
 		)DATA)
 		WHERE #{start} <= RNUM AND RNUM <= #{end}
 		]]>
