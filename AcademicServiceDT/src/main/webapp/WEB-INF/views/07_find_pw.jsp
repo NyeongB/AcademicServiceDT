@@ -94,7 +94,7 @@ function ajaxRequest()
 				<div class="login">
 					
 
-					<form action="pwPhoneCheck" method="get">
+					<form action="pwPhoneCheck" method="get" class="form-inline">
                   <br>
                      <!-- <input type="radio" name="phoneSearch" id="phoneSearch"><b>
                         휴대전화로 찾기</b> <br>
