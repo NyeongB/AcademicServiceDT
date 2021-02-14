@@ -56,9 +56,9 @@ hr {
 
 				<br>
 				<hr>
-				<br>
-				<jsp:include page="00_buttons.jsp"></jsp:include>
 
+				<jsp:include page="00_buttons.jsp"></jsp:include>
+				<br>
 				<div>
 					<table class="table table-bordered">
 						<thead>
