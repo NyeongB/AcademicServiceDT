@@ -1,7 +1,9 @@
 package com.oopsw.dt;
 
 public class ScoreDTO {
-
+	
+	private String year;
+	private String semester;
 	private String subject_code;
 	private String subject_name;
 	private String score;
@@ -11,6 +13,18 @@ public class ScoreDTO {
 
 	private String scoreChange;
 	
+	public String getYear() {
+		return year;
+	}
+	public void setYear(String year) {
+		this.year = year;
+	}
+	public String getSemester() {
+		return semester;
+	}
+	public void setSemester(String semester) {
+		this.semester = semester;
+	}
 	public String getScoreChange() {
 		return scoreChange;
 	}

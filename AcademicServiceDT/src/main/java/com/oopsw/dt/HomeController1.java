@@ -30,9 +30,6 @@ public class HomeController1 {
 	@RequestMapping(value = "/mySubjects", method = RequestMethod.GET) // 신청과목조회
 	public String checkApplySubject(HttpServletRequest request, Model model) {
 		
-//		Collection<SubjectDTO> list = memberService.checkApplySubject();
-//		request.setAttribute("list", list);
-		
 		HttpSession session = request.getSession(true);
 		String id = (String) session.getAttribute("studentId");
 		
@@ -63,6 +60,13 @@ public class HomeController1 {
 		String id = (String) session.getAttribute("studentId");
 		
 		Collection<ScoreDTO> list = memberService.score(id, request.getParameter("y"), request.getParameter("s"));
+		
+		//성적 계산
+		for(ScoreDTO dto : list){
+			int score = Integer.parseInt(dto.getScore());
+			dto.setScoreChange(calScore(score));
+			}
+		
 		request.setAttribute("list", list);
 
 		return "05_myScore";
@@ -76,14 +80,11 @@ public class HomeController1 {
 		Collection<ScoreDTO> list = memberService.scoreAll(id);
 		
 		//성적 계산
-		for(ScoreDTO dto : list)
-		{
-			int score = Integer.parseInt(dto.getScore());
-			
+		for(ScoreDTO dto : list){
+			int score = Integer.parseInt(dto.getScore());	
 			dto.setScoreChange(calScore(score));
-			
-		}
-		
+			}
+
 		request.setAttribute("list", list);
 		
 		return "05_myScore";

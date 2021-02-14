@@ -60,9 +60,7 @@ function change(style) {
 				<br>
 				<hr>
 
-
-
-				<div class="container" style="text-align: right;">
+				<div class="container" align = "right" style= "margin-right: 200px;">
 					<select class="form-control"  style="width:200px;" onchange = "location.href=this.value">
 						<option value>선택</option>
 						<option value = "http://localhost:5432/dt/myScores">전체학기</option>
@@ -73,11 +71,12 @@ function change(style) {
 				
 				<br>
 
-
 				<div>
 					<table class="table table-bordered">
 						<thead>
 							<tr>
+								<th>년도</th>
+								<th>학기</th>
 								<th>과목코드</th>
 								<th>과목명</th>
 								<th>성적</th>
@@ -91,6 +90,8 @@ function change(style) {
 						
 							<tbody>
 								<tr>
+									<td>${tmp.year}</td>
+									<td>${tmp.semester}</td>
 									<td>${tmp.subject_code}</td>
 									<td>${tmp.subject_name}</td>
 									<td>${tmp.scoreChange}</td>
@@ -104,19 +105,31 @@ function change(style) {
 
 					</table>
 					
-					<table class="table table-bordered">
-					<colgroup>
-						<col width = "20%" />
-					</colgroup>
+					</div>
+					
+					<div align = "right">
+					
+					<table class="table table-bordered" style="width:200px;">
+					
 					<c:set var = "sum" value = "0" />
 					<c:forEach var="tmp" items="${list}">
 					<tbody>
 						<c:set var = "sum" value = "${sum+tmp.credit}"/>
 					</tbody>
 					</c:forEach>
-						<tr>
+						<tr width = "20%">
 							<td>취득학점 : <c:out value = "${sum}"/></td>
 						</tr>
+						
+					<c:set var = "sum2" value = "0" />
+					<c:forEach var="tmp2" items="${list2}">
+					<tbody>
+						<c:set var = "sum2" value = "${sum2+tmp2.scoreChange}"/>
+					</tbody>
+					</c:forEach>
+						<tr width = "20%">
+							<td>백분위 점수 : <c:out value = "${sum2}"/></td>
+						</tr>	
 						
 				</table>
 						
