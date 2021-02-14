@@ -31,12 +31,8 @@ hr {
 			<div class="col-md-8">
 
 				<jsp:include page="00_nav.jsp"></jsp:include>
-
-
-				<br>
 				<hr>
-
-				<image>
+				<br>
 				<table class="table table-bordered">
 
 					<tbody>

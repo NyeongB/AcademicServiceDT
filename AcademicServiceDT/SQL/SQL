@@ -1,0 +1,9 @@
+SELECT * FROM subjects
+SELECT * FROM registers
+DELETE registers
+UPDATE subjects SET subject_code = '007' WHERE subject_code = 'B-007';
+
+INSERT INTO registers(register_code, subject_code, student_id, score, year, semester) VALUES('030', '026', '20120001', '73.00', '2020', '1');
+INSERT INTO registers(register_code, subject_code, student_id, score, year, semester) VALUES('020', '037', '20120001', '96.00', '2020', '2');
+
+CREATE SEQUENCE SEQ INCREMENT BY 1 START WITH 50 MINVALUE 50 MAXVALUE 1000;
