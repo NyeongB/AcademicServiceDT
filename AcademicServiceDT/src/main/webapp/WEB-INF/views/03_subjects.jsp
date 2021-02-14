@@ -53,13 +53,13 @@ hr {
 
 				<jsp:include page="00_buttons.jsp"></jsp:include>
 				<br>
+				<p class="lead" style="text-align: right;">[ 2021년 1학기 ]</p>
 				<div>
 					<table class="table table-bordered">
 						<thead>
 							<tr>
-								<th>학년</th>
+								<th>수강학년</th>
 								<th>이수구분</th>
-								<th>과목코드</th>
 								<th>과목명</th>
 								<th>교수</th>
 								<th>학점</th>
@@ -75,18 +75,13 @@ hr {
 
 							<tbody>
 								<tr>
-									<td><c:choose>
-
-											<c:when test="${tmp.subject_grade == 0}">
-            전체
-         							
-         							</c:when>
-											<c:otherwise>
-            ${tmp.subject_grade}
-         </c:otherwise>
-										</c:choose></td>
+									<td>
+									<c:choose>
+									<c:when test="${tmp.subject_grade == 0}">전체</c:when>
+									<c:otherwise>${tmp.subject_grade}</c:otherwise>
+									</c:choose>
+									</td>
 									<td>${tmp.category}</td>
-									<td>${tmp.subject_code}</td>
 									<td id="subject">${tmp.subject_name}</td>
 									<td>${tmp.professor_name}</td>
 									<td>${tmp.credit}</td>

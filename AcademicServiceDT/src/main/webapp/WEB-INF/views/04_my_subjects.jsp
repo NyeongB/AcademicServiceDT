@@ -84,7 +84,11 @@ hr {
     				<tbody>	
     					
 						<tr>
-							<td>${tmp.subject_grade}</td>
+							<c:choose>
+									<c:when test="${tmp.subject_grade == 0}">전체</c:when>
+									<c:otherwise>${tmp.subject_grade}</c:otherwise>
+									</c:choose>
+									</td>
 							<td>${tmp.category}</td>
 							<td>${tmp.subject_code}</td>
 							<td>${tmp.subject_name}</td>
