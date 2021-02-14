@@ -36,7 +36,7 @@ hr {
 
 
 				<div class="container" style="text-align: right;">
-					<select class="form-control" onchange = "location.href=this.value">
+					<select class="form-control"  style="width:200px;" onchange = "location.href=this.value">
 						<option value>선택</option>
 						<option value = http://localhost:5432/dt/myScores>전체학기</option>
 						<option value = "http://localhost:5432/dt/myScore?y=2020&s=1">2020학년도 1학기</option>

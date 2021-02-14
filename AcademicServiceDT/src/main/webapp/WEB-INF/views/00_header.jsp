@@ -31,7 +31,7 @@ clear: both;
 </head>
 <body>
 
-<div class="first"><h3>DT 학사지원시스템</h3></div>
+<div class="first"><h3>DT 학사관리시스템</h3></div>
 				<div class="second"><h3>로그인</h3></div>
 				<br>
 				<hr class="form">
