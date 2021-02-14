@@ -27,14 +27,17 @@
 
 
 					<form class="form-horizontal" action="loginAction">
-
+<div align="center">
+<br><br><br><br>
 						<h1>학번 확인</h1>
-						<h3>${name}님의 학번은 "${studentId }"입니다.</h3>
-
-						<div class="form-group">
+						<h3>${name}님의 학번은 " <strong>${studentId }</strong> "입니다.</h3>
+						
+<br><br>
+						<div class="form-group" style="margin-right: 185px;">
 							<div class="col-sm-offset-2 col-sm-10">
 								<a href="loginMain"><button type="button" class="btn btn-primary">로그인 화면</button></a>
 							</div>
+						</div>
 						</div>
 					</form>
 

@@ -27,10 +27,11 @@
 
 
 					<form class="form-horizontal" action="loginAction">
-
+					
+					<div align="center">
 						<h1>학번 확인</h1>
 						<h3>최철녕님의 학번은 "201222718"입니다.</h3>
-
+</div>
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
 								<button type="submit" class="btn btn-primary">로그인 화면</button>
