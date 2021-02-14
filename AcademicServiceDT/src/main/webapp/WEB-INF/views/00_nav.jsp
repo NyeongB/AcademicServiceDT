@@ -25,6 +25,11 @@ header nav ul li {
 	font-weight: bold;
 }
 
+#name{
+font-size: medium;
+font-weight: bold;
+}
+
 </style>
 </head>
 <body>
@@ -38,7 +43,7 @@ header nav ul li {
 					<li><a href="subjects">수강신청</a></li>
 					<li><a href="start">성적조회</a></li>
 					<li><a href="logout">로그아웃</a></li>
-					${studentName }님 환영합니다.
+					<div id="name" style="display: inline;">${studentName }님 환영합니다.</div>
 				</ul>
 			</nav>
 		</header>

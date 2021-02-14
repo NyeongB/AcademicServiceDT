@@ -15,10 +15,6 @@
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery.min.js"></script>
 <style>
-.login {
-	text-align: right;
-}
-
 hr {
 	clear: both;
 }
@@ -50,18 +46,12 @@ hr {
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 
-
 				<jsp:include page="00_nav.jsp"></jsp:include>
-
 
 				<br>
 				<hr>
+				<br>
 				<jsp:include page="00_buttons.jsp"></jsp:include>
-
-
-				<p class="lead" style="text-align: right;">2020년 1학기</p>
-
-
 
 				<div>
 					<table class="table table-bordered">
@@ -91,10 +81,10 @@ hr {
             전체
          							
          							</c:when>
-         							<c:otherwise>
+											<c:otherwise>
             ${tmp.subject_grade}
          </c:otherwise>
-										</c:choose> </td>
+										</c:choose></td>
 									<td>${tmp.category}</td>
 									<td>${tmp.subject_code}</td>
 									<td id="subject">${tmp.subject_name}</td>
