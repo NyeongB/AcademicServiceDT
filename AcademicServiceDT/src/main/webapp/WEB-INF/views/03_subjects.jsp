@@ -34,14 +34,8 @@ hr {
 	  //name = document.querySelector("#subject").value;
       if(confirm('정말 신청하시겠습니까?'))
       {
-    	  var n = String(code);
-    	  //alert(n.length)
-    	  if(n.length==2)
-    		  location.href='insert?subjectCode=0'+code;
-    	  else if(n.length==1)
-    		  location.href='insert?subjectCode=00'+code;
-    	  else
-    		  location.href='insert?subjectCode='+code;
+    	  
+    	 location.href='insert?subjectCode='+code;
       }
       
    }
