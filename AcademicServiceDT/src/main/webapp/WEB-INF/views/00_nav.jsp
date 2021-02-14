@@ -20,8 +20,8 @@ header nav ul {
 header nav ul li {
 	display: inline;
 	float: left;
-	font-size: 40px;
-	padding-right: 20px;
+	font-size: 35px;
+	padding-right: 30px;
 	font-weight: bold;
 }
 

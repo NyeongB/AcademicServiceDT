@@ -22,6 +22,10 @@
 hr {
 	clear: both;
 }
+
+th{
+background-color: #F1F3F4;
+}
 </style>
 </head>
 
