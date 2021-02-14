@@ -23,7 +23,6 @@ import com.oopsw.util.Send;
  */
 @Controller
 public class HomeController3 {
-
 	@Autowired
 	private MemberService3 memberService;
 
@@ -109,7 +108,6 @@ public class HomeController3 {
 		
 		Collection<SubjectDTO> list = memberService.subjectList(model, request);
 		request.setAttribute("list", list);
-
 		return "03_subjects";
 	}
 	
