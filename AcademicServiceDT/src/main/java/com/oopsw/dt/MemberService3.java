@@ -104,4 +104,9 @@ public class MemberService3 {
 		return memberDAO.getAllSchedule3(dto);
 	}
 
+	public int insert(String subjectCode, String studentId) {
+		// TODO Auto-generated method stub
+		return memberDAO.insert(subjectCode,studentId);
+	}
+
 }

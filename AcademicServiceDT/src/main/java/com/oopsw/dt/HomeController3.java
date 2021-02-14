@@ -130,5 +130,23 @@ public class HomeController3 {
 
 		return "03_subjects";
 	}
+	
+	@RequestMapping(value = "/insert", method = RequestMethod.GET)
+	public String insert(HttpServletRequest request, Model model) {
+		
+		
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+		System.out.println(id+" "+request.getParameter("subjectCode"));
+		int result = memberService.insert(request.getParameter("subjectCode"),id);
+		
+		
+		
+		
+		Collection<SubjectDTO> list = memberService.subjectList(model, request);
+		request.setAttribute("list", list);
+
+		return "03_subjects";
+	}
 
 }

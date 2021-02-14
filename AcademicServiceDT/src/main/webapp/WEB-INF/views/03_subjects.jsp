@@ -20,12 +20,25 @@ hr {
 </style>
 
 <script type="text/javascript">
+//var name;
 
    
-   function insert(num)
+   function insert(code)
    {
+	  
+	  //name = document.querySelector("#subject").value;
       if(confirm('정말 신청하시겠습니까?'))
-      location.href='delete?registerCode='+num;
+      {
+    	  var n = String(code);
+    	  alert(n.length)
+    	  if(n.length==2)
+    		  location.href='insert?subjectCode=0'+code;
+    	  else if(n.length==1)
+    		  location.href='insert?subjectCode=00'+code;
+    	  else
+    		  location.href='insert?subjectCode='+code;
+      }
+      
    }
 
 </script>
@@ -76,7 +89,7 @@ hr {
 									<td>${tmp.subject_grade}</td>
 									<td>${tmp.category}</td>
 									<td>${tmp.subject_code}</td>
-									<td>${tmp.subject_name}</td>
+									<td id="subject">${tmp.subject_name}</td>
 									<td>${tmp.professor_name}</td>
 									<td>${tmp.credit}</td>
 									<td>${tmp.subject_time}</td>
