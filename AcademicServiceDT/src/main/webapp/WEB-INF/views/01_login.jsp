@@ -33,7 +33,7 @@ $("#btn").click(function(){
 
 				<jsp:include page="00_header.jsp"></jsp:include>
 				
-				
+				<br>
 				<div  align="right">
 
 					<form class="form-horizontal" action="loginAction">

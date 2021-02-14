@@ -34,10 +34,9 @@ private MemberService2 memberService;
 		studentId = memberService.login2(request.getParameter("id"), request.getParameter("pw"));
 		if(studentName !=null){			
 			HttpSession session = request.getSession(true);
-			HttpSession session2 = request.getSession(true);
 		
 			session.setAttribute("studentName", studentName);
-			session2.setAttribute("studentId", studentId);
+			session.setAttribute("studentId", studentId);
 
 			return userInfo(request, model);
 		}
