@@ -30,7 +30,7 @@ hr {
       if(confirm('정말 신청하시겠습니까?'))
       {
     	  var n = String(code);
-    	  alert(n.length)
+    	  //alert(n.length)
     	  if(n.length==2)
     		  location.href='insert?subjectCode=0'+code;
     	  else if(n.length==1)
@@ -86,7 +86,16 @@ hr {
 
 							<tbody>
 								<tr>
-									<td>${tmp.subject_grade}</td>
+									<td><c:choose>
+
+											<c:when test="${tmp.subject_grade == 0}">
+            전체
+         							
+         							</c:when>
+         							<c:otherwise>
+            ${tmp.subject_grade}
+         </c:otherwise>
+										</c:choose> </td>
 									<td>${tmp.category}</td>
 									<td>${tmp.subject_code}</td>
 									<td id="subject">${tmp.subject_name}</td>
