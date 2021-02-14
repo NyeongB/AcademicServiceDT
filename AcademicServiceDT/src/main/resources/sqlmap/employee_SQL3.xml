@@ -82,5 +82,9 @@
 		select password from students where phone = #{phone} and student_id = #{studentId}
 	</select>
 	
+	<insert id="insert">
+		insert into registers(register_code, subject_code, student_id, score, year, semester)
+		values(seq.NEXTVAL, #{subjectCode}, #{studentId}, null, '2021', '1')
+	</insert>
 	
 </mapper>
