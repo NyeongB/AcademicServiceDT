@@ -69,7 +69,6 @@ hr {
 						<tr>
 							<th>수강학년</th>
 							<th>이수구분</th>
-							<th>과목코드</th>
 							<th>과목명</th>
 							<th>교수</th>
 							<th>학점</th>
@@ -90,7 +89,6 @@ hr {
 									</c:choose>
 									</td>
 							<td>${tmp.category}</td>
-							<td>${tmp.subject_code}</td>
 							<td>${tmp.subject_name}</td>
 							<td>${tmp.professor_name}</td>
 							<td>${tmp.credit}</td>
@@ -98,7 +96,7 @@ hr {
 							<td>${tmp.subject_place}</td>
 							<td>
                            <button type="button" class="btn btn-danger" onclick='del(${tmp.register_code})'>
-                           Delete
+                            Delete
                            </button>
                         </td>
 							

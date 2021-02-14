@@ -70,6 +70,7 @@ function change(style) {
 						<option value = "http://localhost:5432/dt/myScores">전체학기</option>
 						<option value = "http://localhost:5432/dt/myScore?y=2020&s=1">2020학년도 1학기</option>
 						<option value = "http://localhost:5432/dt/myScore?y=2020&s=2">2020학년도 2학기</option>
+						<option value>2021학년도 1학기</option>
 					</select>
 				</div>
 				
