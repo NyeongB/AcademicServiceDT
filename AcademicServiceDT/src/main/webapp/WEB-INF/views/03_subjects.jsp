@@ -87,7 +87,7 @@ hr {
 									<td>${tmp.credit}</td>
 									<td>${tmp.subject_time}</td>
 									<td>${tmp.subject_place}</td>
-									<td><button type="button" class="btn btn-primary"
+									<td align="center"><button type="button" class="btn btn-primary"
 											onclick='insert(${tmp.subject_code})'>신청</button></td>
 								</tr>
 

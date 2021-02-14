@@ -95,7 +95,7 @@ hr {
 							<td>${tmp.credit}</td>
 							<td>${tmp.subject_time}</td>	
 							<td>${tmp.subject_place}</td>
-							<td>
+							<td align="center">
                            <button type="button" class="btn btn-danger" onclick='del(${tmp.register_code})'>
 											삭제</button>
                         </td>

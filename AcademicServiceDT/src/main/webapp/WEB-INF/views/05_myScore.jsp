@@ -82,7 +82,7 @@ function change(style) {
 							<tr>
 								<th>년도</th>
 								<th>학기</th>
-								<th>과목코드</th>
+								
 								<th>과목명</th>
 								<th>성적</th>
 								<th>학점</th>
@@ -97,7 +97,7 @@ function change(style) {
 								<tr>
 									<td>${tmp.year}</td>
 									<td>${tmp.semester}</td>
-									<td>${tmp.subject_code}</td>
+									
 									<td>${tmp.subject_name}</td>
 									<td>${tmp.scoreChange}</td>
 									<td>${tmp.credit}</td>
