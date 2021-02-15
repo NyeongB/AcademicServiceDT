@@ -15,6 +15,14 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 <style>
+.tbWidth10{width:10%;}
+.tbWidth15{width:15%;}
+.tbWidth7{width:7%;}
+.tbWidth20{width:20%;}
+.tbWidth30{width:30%;}
+.tbWidth35{width:35%;}
+.tbWidth40{width:40%;}
+.tbWidth45{width:45%;}
 .login {
 	text-align: right;
 }
@@ -45,11 +53,11 @@ background-color: #F1F3F4;
 
 					<tbody>
 						<tr>
-							<th>이름</th>
-							<td>${userInfoDTO.studentName }</td>
-							<th>이메일</th>
-							<td>${userInfoDTO.email}</td>
-							<th>생년월일</th>
+							<th class="tbWidth10">이름</th>
+							<td class="tbWidth15">${userInfoDTO.studentName }</td>
+							<th class="tbWidth10">이메일</th>
+							<td class="tbWidth35">${userInfoDTO.email}</td>
+							<th class="tbWidth10">생년월일</th>
 							<td>${userInfoDTO.birthday}</td>
 						</tr>
 						<tr>
@@ -64,7 +72,9 @@ background-color: #F1F3F4;
 							<th>학적상태</th>
 							<td>${userInfoDTO.statement }</td>
 							<th>주소</th>
-							<td colspan="3">${userInfoDTO.address }</td>
+							<td>${userInfoDTO.address }</td>
+							<th>연락처</th>
+							<td>${userInfoDTO.phone}</td>
 
 						</tr>
 
