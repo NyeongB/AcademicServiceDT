@@ -132,9 +132,9 @@ public class HomeController3 {
 
 		// 현재
 		int myNum = memberService.myNum(id);
-		System.out.println("현재까지 내가 신청한 학점" + myNum);
+		//System.out.println("현재까지 내가 신청한 학점" + myNum);
 		int insertNum = memberService.subjectNum(subjectCode);
-		System.out.println("들어갈 학점" + insertNum);
+		//System.out.println("들어갈 학점" + insertNum);
 
 		if (myNum + insertNum > 21) {
 			model.addAttribute("msg", 0);

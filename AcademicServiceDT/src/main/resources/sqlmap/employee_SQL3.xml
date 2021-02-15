@@ -101,7 +101,7 @@
 	</insert>
 	
 	<select id="myNum" resultType="java.lang.Integer">
-		SELECT SUM(CREDIT)
+		SELECT NVL(SUM(CREDIT),0)
 			FROM registers r, subjects s
 			WHERE r.student_id = #{studentId} AND r.score is NULL AND r.subject_code = s.subject_code
 	</select>

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class HomeController2 {
-@Autowired
+@Autowired	
 private MemberService2 memberService;
 
 	String studentName;
@@ -46,8 +46,9 @@ private MemberService2 memberService;
 	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(HttpServletRequest request,Model model){
-		studentId = null;
-		studentName = null;
+		HttpSession session = request.getSession(true);
+		session.setAttribute("studentName", null);
+		session.setAttribute("studentId", null);
 		return "01_login";
 	}
 	

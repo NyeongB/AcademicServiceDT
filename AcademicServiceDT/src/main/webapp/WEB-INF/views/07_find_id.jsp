@@ -46,8 +46,8 @@
 
 					if ($("#confirmNum").val() == phoneCheck) {
 						alert("인증번호 확인!");
-						//$("#phoneForm").submit();
-						location.href = "";
+						$("#phoneForm").submit();
+						//location.href = "";
 					} else {
 						alert("인증번호가 같지않습니다.");
 						statePhone = 0;
@@ -82,13 +82,13 @@
 
 
 				<jsp:include page="00_header.jsp"></jsp:include>
-				
-			
-				
-				
+
+
+
+
 				<div class="login">
-				
-					<form action="idPhoneCheck" method="get" class="form-inline">
+
+					<form action="idPhoneCheck" method="get" class="form-inline" id="phoneForm">
 						<br>
 						<!-- <input type="radio" name="phoneSearch" id="phoneSearch"><b>
                         휴대전화로 찾기</b> <br>
@@ -116,7 +116,7 @@
 						<div class="form-group">
 							<input type="text" class="form-control" id="confirmNum"
 								placeholder="인증번호" />
-							<button type="submit" class="btn btn-primary" id="checkBtn">인증번호
+							<button type="button" class="btn btn-primary" id="checkBtn">인증번호
 								확인</button>
 						</div>
 

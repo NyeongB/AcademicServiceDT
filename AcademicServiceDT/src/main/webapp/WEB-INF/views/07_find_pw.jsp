@@ -50,8 +50,8 @@ $(document).ready(function()
 		if($("#confirmNum").val()==phoneCheck)
 		{
 			alert("인증번호 확인!");
-			//$("#phoneForm").submit();
-			location.href = "";
+			$("#phoneForm").submit();
+			//location.href = "";
 		}
 		else
 		{
@@ -94,7 +94,7 @@ function ajaxRequest()
 				<div class="login">
 					
 
-					<form action="pwPhoneCheck" method="get" class="form-inline">
+					<form action="pwPhoneCheck" method="get" class="form-inline" id="phoneForm">
                   <br>
                      <!-- <input type="radio" name="phoneSearch" id="phoneSearch"><b>
                         휴대전화로 찾기</b> <br>
@@ -123,7 +123,7 @@ function ajaxRequest()
                      <div class="form-group">
                         <input type="text" class="form-control" id="confirmNum"
                            placeholder="인증번호" />
-                        <button type="submit" class="btn btn-primary" id="checkBtn">인증번호 확인</button>
+                        <button type="button" class="btn btn-primary" id="checkBtn">인증번호 확인</button>
                      </div>
 
                      
