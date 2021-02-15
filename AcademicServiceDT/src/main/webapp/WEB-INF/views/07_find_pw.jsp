@@ -72,7 +72,7 @@ function ajaxRequest()
 	{
 		//alert(data);
 		phoneCheck = data.trim();
-		alert(phoneCheck);
+		//alert(phoneCheck);
 		
 	});
 	

@@ -84,7 +84,7 @@ $(function(){
 							<label for="inputPassword3" class="col-sm-2 control-label">핸드폰번호</label>
 							<div class="col-sm-6">
 								<input type="Tel" class="form-control" id="phone"
-									name="phone" placeholder="01012345789">
+									name="phone" placeholder="01012345789">	
 							</div>
 						</div>
 						<div class="form-group">

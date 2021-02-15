@@ -66,7 +66,7 @@
 		}, function(data) {
 			//alert(data);
 			phoneCheck = data.trim();
-			alert(phoneCheck);
+			//alert(phoneCheck);
 
 		});
 
