@@ -1,0 +1,23 @@
+SELECT * FROM registers WHERE subject_code IN (SELECT subject_code FROM registers) AND student_id='20120001' AND score IS NOT NULL ORDER BY student_id, semester;
+DELETE FROM registers WHERE year='2019'
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '1', '20120001', '96.00', '2019', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '2', '20120001', '78.00', '2019', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '4', '20120001', '85.00', '2019', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '8', '20120001', '86.00', '2019', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '12', '20120001', '81.00', '2019', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '13', '20120001', '88.00', '2019', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '14', '20120001', '92.00', '2019', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '11', '20120001', '96.00', '2019', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '16', '20120001', '96.00', '2019', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '19', '20120001', '85.00', '2019', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '27', '20120001', '97.00', '2019', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '29', '20120001', '100.00', '2019', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '30', '20120001', '78.00', '2019', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '33', '20120001', '78.00', '2020', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '32', '20120001', '78.00', '2020', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '37', '20120001', '78.00', '2020', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '31', '20120001', '78.00', '2020', 1);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '34', '20120001', '78.00', '2020', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '35', '20120001', '78.00', '2020', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '36', '20120001', '78.00', '2020', 2);
+INSERT INTO registers (register_code, subject_code, student_id, score, year, semester) VALUES(SEQ.NEXTVAL, '39', '20120001', '78.00', '2020', 2);

@@ -41,7 +41,7 @@ font-size: medium;
 				<ul>
 					<li><a href="userInfo">학생정보</a></li>
 					<li><a href="subjects">수강신청</a></li>
-					<li><a href="start">성적조회</a></li>
+					<li><a href="myScores">성적조회</a></li>
 					<li><a href="logout">로그아웃</a></li>
 					<div id="name" style="display: inline;">  " <strong>${studentName }</strong> " 님 환영합니다.</div>
 				</ul>

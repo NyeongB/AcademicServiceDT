@@ -1,3 +1,4 @@
+<%@page import="com.oopsw.dt.ScoreDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -41,10 +42,10 @@ th {
 			}
 			else if(state == '1' || state == '2')
 			{
-				location.href = 'myScore?y=2020&s=' + state;
+				location.href = 'myScore?y=2019&s=' + state;
 			}
 			else if(state == '3' || state == '4'){
-				location.href = 'myScore?y=2019&s=' + (state-2);
+				location.href = 'myScore?y=2020&s=' + (state-2);
 			}
 		});
 
@@ -85,15 +86,18 @@ th {
 				<br>
 				<hr>
 
+				<div align="right">
+				
+				</div>
 				<div class="container" align="left">
 					<select class="form-control" style="width: 200px;" id="selectBox"
 						name="selectBox">
-						<option value>선택</option>
+						<option value>학기 선택</option>
 						<option value="0">전체학기</option>
-						<option value="3">2019학년도 1학기</option>
-						<option value="4">2019학년도 2학기</option>
-						<option value="1">2020학년도 1학기</option>
-						<option value="2">2020학년도 2학기</option>
+						<option value="1">2019학년도 1학기</option>
+						<option value="2">2019학년도 2학기</option>
+						<option value="3">2020학년도 1학기</option>
+						<option value="4">2020학년도 2학기</option>
 					</select>
 				</div>
 
@@ -137,11 +141,8 @@ th {
 									<td>${tmp.professor_name}</td>
 								</tr>
 							</tbody>
-
 						</c:forEach>
-
 					</table>
-
 				</div>
 
 				<div align="right">
