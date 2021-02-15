@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:if test="${studentId == null }">
-	<script>
-		location.href="loginMain";
-	</script>
-</c:if>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -98,7 +94,7 @@ function ajaxRequest()
 				<div class="login">
 					
 
-					<form action="pwPhoneCheck" method="get">
+					<form action="pwPhoneCheck" method="get" class="form-inline">
                   <br>
                      <!-- <input type="radio" name="phoneSearch" id="phoneSearch"><b>
                         휴대전화로 찾기</b> <br>
