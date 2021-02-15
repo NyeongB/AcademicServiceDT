@@ -119,4 +119,14 @@ public class MemberService3 {
 		return memberDAO.insert(subjectCode,studentId);
 	}
 
+	public int myNum(String id) {
+		// TODO Auto-generated method stub
+		return memberDAO.myNum(id);
+	}
+
+	public int subjectNum(String subjectCode) {
+		// TODO Auto-generated method stub
+		return memberDAO.subjectNum(subjectCode);
+	}
+
 }

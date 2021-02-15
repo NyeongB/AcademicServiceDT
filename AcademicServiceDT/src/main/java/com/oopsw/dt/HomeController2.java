@@ -55,6 +55,8 @@ private MemberService2 memberService;
 	public String userInfo(HttpServletRequest request, Model model) {
 		
 		UserInfoDTO userInfoDTO = memberService.userInfo(studentId);
+		String phone = userInfoDTO.getPhone();
+		userInfoDTO.setPhone(phone.substring(0,3)+"-"+phone.substring(3,7)+"-"+phone.substring(7,11));
 		request.setAttribute("userInfoDTO", userInfoDTO);
 		System.out.println(userInfoDTO);
 		return "02_user_info";
@@ -65,6 +67,8 @@ private MemberService2 memberService;
 		
 		Integer num = memberService.changeInfo(studentId, request.getParameter("phone"), request.getParameter("email"), request.getParameter("address"), request.getParameter("password"));
 		UserInfoDTO userInfoDTO = memberService.userInfo(studentId);
+		String phone = userInfoDTO.getPhone();
+		userInfoDTO.setPhone(phone.substring(0,3)+"-"+phone.substring(3,7)+"-"+phone.substring(7,11));
 		request.setAttribute("userInfoDTO", userInfoDTO);
 		System.out.println(userInfoDTO);
 //		String pw = request.getParameter("password");

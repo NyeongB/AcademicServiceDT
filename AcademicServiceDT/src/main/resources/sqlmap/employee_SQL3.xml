@@ -100,4 +100,16 @@
 		values(seq.NEXTVAL, #{subjectCode}, #{studentId}, null, '2021', '1')
 	</insert>
 	
+	<select id="myNum" resultType="java.lang.Integer">
+		SELECT SUM(CREDIT)
+			FROM registers r, subjects s
+			WHERE r.student_id = #{studentId} AND r.score is NULL AND r.subject_code = s.subject_code
+	</select>
+	
+	<select id="subjectNum" resultType="java.lang.Integer">
+		SELECT CREDIT
+			FROM subjects 
+			WHERE subject_code = #{subjectCode}
+	</select>
+	
 </mapper>
