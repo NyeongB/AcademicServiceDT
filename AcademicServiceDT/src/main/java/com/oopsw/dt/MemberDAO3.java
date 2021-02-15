@@ -28,5 +28,8 @@ public interface MemberDAO3 {
 	public int getCount3(@Param("studentId")String studentId);
 
 	public int insert(@Param("subjectCode")String subjectCode, @Param("studentId")String studentId);
+	
+	public int myNum(@Param("studentId")String studentId);
+	public int subjectNum(@Param("subjectCode")String subjectCode);
 
 }

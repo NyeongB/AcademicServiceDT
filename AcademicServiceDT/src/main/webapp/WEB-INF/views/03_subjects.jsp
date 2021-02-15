@@ -6,6 +6,11 @@
 		location.href="loginMain";
 	</script>
 </c:if>
+<c:if test="${msg == 0 }">
+	<script>
+		alert("최대 학점을 초과하셨습니다.");
+	</script>
+</c:if>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

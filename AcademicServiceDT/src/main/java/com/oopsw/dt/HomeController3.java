@@ -2,7 +2,6 @@ package com.oopsw.dt;
 
 import java.util.Collection;
 
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -27,7 +26,7 @@ public class HomeController3 {
 
 		return "01_login";
 	}
-	
+
 	@RequestMapping(value = "/loginMain", method = RequestMethod.GET)
 	public String loginMain(HttpServletRequest request, Model model) {
 
@@ -39,21 +38,20 @@ public class HomeController3 {
 
 		return "07_find_id";
 	}
-	
+
 	@RequestMapping(value = "/pw", method = RequestMethod.GET)
 	public String pw(HttpServletRequest request, Model model) {
 
 		return "07_find_pw";
 	}
-	
 
 	@RequestMapping(value = "/idPhoneCheck", method = RequestMethod.GET)
 	public String idPhoneCheck(HttpServletRequest request, Model model) {
-		
+
 		String name = request.getParameter("name");
-		String phone = "010"+request.getParameter("num2");
+		String phone = "010" + request.getParameter("num2");
 		String studentId = memberService.idPhoneCheck(name, phone);
-		System.out.println(name+" "+phone);
+		System.out.println(name + " " + phone);
 		if (studentId != null) {
 
 			request.setAttribute("studentId", studentId);
@@ -63,12 +61,12 @@ public class HomeController3 {
 		}
 		return "07_find_id";
 	}
-	
+
 	@RequestMapping(value = "/pwPhoneCheck", method = RequestMethod.GET)
 	public String pwPhoneCheck(HttpServletRequest request, Model model) {
-		
+
 		String studentId = request.getParameter("id");
-		String phone = "010"+request.getParameter("num2");
+		String phone = "010" + request.getParameter("num2");
 		String pw = memberService.pwPhoneCheck(studentId, phone);
 		if (pw != null) {
 
@@ -79,7 +77,6 @@ public class HomeController3 {
 		}
 		return "07_find_pw";
 	}
-
 
 	@RequestMapping(value = "/telcheck", method = RequestMethod.GET)
 	public String telcheck(Model model, HttpServletRequest request) {
@@ -101,39 +98,52 @@ public class HomeController3 {
 
 	@RequestMapping(value = "/subjects", method = RequestMethod.GET)
 	public String subjects(HttpServletRequest request, Model model) {
-		
+
 		Collection<SubjectDTO> list = memberService.subjectList(model, request);
 		request.setAttribute("list", list);
 		return "03_subjects";
 	}
-	
+
 	@RequestMapping(value = "/subjects2", method = RequestMethod.GET)
 	public String subjects2(HttpServletRequest request, Model model) {
-		
+
 		Collection<SubjectDTO> list = memberService.subjectList2(model, request);
 		request.setAttribute("list", list);
 
 		return "03_subjects";
 	}
-	
+
 	@RequestMapping(value = "/subjects3", method = RequestMethod.GET)
 	public String subjects3(HttpServletRequest request, Model model) {
-		
+
 		Collection<SubjectDTO> list = memberService.subjectList3(model, request);
 		request.setAttribute("list", list);
 
 		return "03_subjects";
 	}
-	
+
 	@RequestMapping(value = "/insert", method = RequestMethod.GET)
 	public String insert(HttpServletRequest request, Model model) {
-		
-		
+
 		HttpSession session = request.getSession(true);
 		String id = (String) session.getAttribute("studentId");
-		System.out.println(id+" "+request.getParameter("subjectCode"));
-		int result = memberService.insert(request.getParameter("subjectCode"),id);
-		
+
+		String subjectCode = request.getParameter("subjectCode");
+
+		// 현재
+		int myNum = memberService.myNum(id);
+		System.out.println("현재까지 내가 신청한 학점" + myNum);
+		int insertNum = memberService.subjectNum(subjectCode);
+		System.out.println("들어갈 학점" + insertNum);
+
+		if (myNum + insertNum > 21) {
+			model.addAttribute("msg", 0);
+
+		} else {
+			int result = memberService.insert(subjectCode, id);
+			System.out.println("insert 갯수 : " + result);
+		}
+
 		Collection<SubjectDTO> list = memberService.subjectList(model, request);
 		request.setAttribute("list", list);
 
