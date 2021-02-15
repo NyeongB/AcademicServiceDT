@@ -65,6 +65,7 @@ background-color: #F1F3F4;
 				<jsp:include page="00_buttons.jsp"></jsp:include>
 				
 				<br>
+				<p class="lead" style="text-align: right;">[ 현재 신청과목 ]</p>
 				<div>
 				<table class="table table-bordered">
 					<thead>

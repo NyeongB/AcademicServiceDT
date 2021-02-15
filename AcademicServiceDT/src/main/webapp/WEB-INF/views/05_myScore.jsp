@@ -38,10 +38,13 @@ th {
 			if (state == '0') {
 				location.href = 'myScores';
 
-			} 
-			else
+			}
+			else if(state == '1' || state == '2')
 			{
 				location.href = 'myScore?y=2020&s=' + state;
+			}
+			else if(state == '3' || state == '4'){
+				location.href = 'myScore?y=2019&s=' + (state-2);
 			}
 		});
 
@@ -87,9 +90,10 @@ th {
 						name="selectBox">
 						<option value>선택</option>
 						<option value="0">전체학기</option>
+						<option value="3">2019학년도 1학기</option>
+						<option value="4">2019학년도 2학기</option>
 						<option value="1">2020학년도 1학기</option>
 						<option value="2">2020학년도 2학기</option>
-						<option value="3">2021학년도 1학기</option>
 					</select>
 				</div>
 
@@ -112,7 +116,6 @@ th {
 							<tr>
 								<th>년도</th>
 								<th>학기</th>
-
 								<th>과목명</th>
 								<th>성적</th>
 								<th>학점</th>
@@ -127,7 +130,6 @@ th {
 								<tr>
 									<td>${tmp.year}</td>
 									<td>${tmp.semester}</td>
-
 									<td>${tmp.subject_name}</td>
 									<td>${tmp.scoreChange}</td>
 									<td>${tmp.credit}</td>

@@ -95,16 +95,8 @@ background-color: #F1F3F4;
 									<td align="center"><button type="button" class="btn btn-primary"
 											onclick='insert(${tmp.subject_code})'>신청</button></td>
 								</tr>
-
 							</tbody>
-
-
-
 						</c:forEach>
-
-
-
-
 					</table>
 				</div>
 

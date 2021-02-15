@@ -23,7 +23,7 @@
 			SELECT r.year as year, r.semester as semester, sub.subject_code as subject_code, sub.subject_name as subject_name, r.score as score, sub.credit as credit, sub.category as category, sub.professor_name as professor_name
 			FROM students stu, registers r, subjects sub
 			WHERE stu.student_id = r.student_id AND r.subject_code = sub.subject_code AND stu.student_id= #{studentId} AND r.score is not null
-			ORDER BY semester
+			ORDER BY year, semester
 		</select>
 		 
 </mapper>
