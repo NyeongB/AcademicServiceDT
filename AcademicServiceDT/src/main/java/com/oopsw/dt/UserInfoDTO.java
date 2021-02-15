@@ -10,6 +10,7 @@ public class UserInfoDTO {
 	private String majorName;
 	private String entranceDate;
 	private String birthday;
+	private String phone;
 	private String address;
 	private String statement;
 	
@@ -61,4 +62,19 @@ public class UserInfoDTO {
 	public void setStatement(String statement) {
 		this.statement = statement;
 	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	@Override
+	public String toString() {
+		return "UserInfoDTO [studentName=" + studentName + ", email=" + email + ", college=" + college + ", majorName="
+				+ majorName + ", entranceDate=" + entranceDate + ", birthday=" + birthday + ", phone=" + phone
+				+ ", address=" + address + ", statement=" + statement + "]";
+	}
+	
+	
+	
 }

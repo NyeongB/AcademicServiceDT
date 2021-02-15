@@ -65,7 +65,7 @@ private MemberService2 memberService;
 		Integer num = memberService.changeInfo(studentId, request.getParameter("phone"), request.getParameter("email"), request.getParameter("address"), request.getParameter("password"));
 		UserInfoDTO userInfoDTO = memberService.userInfo(studentId);
 		request.setAttribute("userInfoDTO", userInfoDTO);
-		
+		System.out.println(userInfoDTO);
 //		String pw = request.getParameter("password");
 //		String pwCheck = request.getParameter("passwordCheck");
 		return "02_user_info";

@@ -9,7 +9,7 @@
 		select student_id from students where student_id=#{studentId} and password=#{password}
 	</select>
 	<select id="userInfo" resultType="com.oopsw.dt.UserInfoDTO">
-		SELECT s.student_name AS studentName, s.email, m.college, m.major_name AS majorName, s.entrance_date AS entranceDate, s.birthday, address, s.statement FROM students s, majors m WHERE s.student_id = #{studentId} AND s.major_code = m.major_code
+		SELECT s.student_name AS studentName, s.email, m.college, m.major_name AS majorName, s.entrance_date AS entranceDate, s.birthday, s.phone, address, s.statement FROM students s, majors m WHERE s.student_id = #{studentId} AND s.major_code = m.major_code
 	</select>
 	<update id="changeInfo">
 		UPDATE students SET phone=NVL(#{phone},phone), email=NVL(#{email}, email), address=NVL(#{address}, address), password=NVL(#{password}, password)WHERE student_id = #{studentId}
