@@ -16,7 +16,7 @@ public interface MemberDAO3 {
 	// 교양
 	public Collection<SubjectDTO> getAllSchedule3(@Param("start")int start, @Param("end")int end, @Param("studentId")String id);
 	
-	public int getCount();
+	public int getCount(@Param("studentId")String studentId);
 
 	public String idPhoneCheck(@Param("name")String name, @Param("phone")String phone);
 
@@ -24,8 +24,8 @@ public interface MemberDAO3 {
 
 	public String pwPhoneCheck(@Param("studentId")String studentId, @Param("phone")String phone);
 
-	public int getCount2();
-	public int getCount3();
+	public int getCount2(@Param("studentId")String studentId);
+	public int getCount3(@Param("studentId")String studentId);
 
 	public int insert(@Param("subjectCode")String subjectCode, @Param("studentId")String studentId);
 

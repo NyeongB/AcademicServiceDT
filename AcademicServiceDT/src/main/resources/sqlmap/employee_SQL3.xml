@@ -66,16 +66,23 @@
 	<select id="getCount" resultType="java.lang.Integer">
 		SELECT COUNT(*)
 		FROM subjects
+		WHERE subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
 	</select>
 	
 	<select id="getCount2" resultType="java.lang.Integer">
 		SELECT COUNT(*)
 		FROM subjects where category like '전공%'
+		AND subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
+		 ORDER BY subject_grade ASC
+		
 	</select>
 	
 	<select id="getCount3" resultType="java.lang.Integer">
 		SELECT COUNT(*)
 		FROM subjects where category like '교양%'
+		AND subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
+		 ORDER BY subject_grade ASC
+		
 	</select>
 	
 	

@@ -40,6 +40,7 @@ private MemberService2 memberService;
 
 			return userInfo(request, model);
 		}
+		model.addAttribute("msg", 0);
 		return "01_login";
 	}
 	

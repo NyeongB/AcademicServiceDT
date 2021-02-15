@@ -35,7 +35,10 @@ public class MemberService3 {
 
 	public Collection<SubjectDTO> subjectList(Model model, HttpServletRequest request) {
 
-		int count = memberDAO.getCount();
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+		int count = memberDAO.getCount(id);
+		
 
 		Paging paging = new Paging();
 		String pageNum = request.getParameter("pageNum");
@@ -55,13 +58,14 @@ public class MemberService3 {
 		
 		
 		request.setAttribute("pageIndexList", pageIndexList);
-		HttpSession session = request.getSession(true);
-		String id = (String) session.getAttribute("studentId");
+		
 		return memberDAO.getAllSchedule(start,end, id);
 	}
 
 	public Collection<SubjectDTO> subjectList2(Model model, HttpServletRequest request) {
-		int count = memberDAO.getCount2();
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+		int count = memberDAO.getCount2(id);
 
 		Paging paging = new Paging();
 		String pageNum = request.getParameter("pageNum");
@@ -80,13 +84,14 @@ public class MemberService3 {
 		dto.setEnd(end);
 
 		request.setAttribute("pageIndexList", pageIndexList);
-		HttpSession session = request.getSession(true);
-		String id = (String) session.getAttribute("studentId");
+		
 		return memberDAO.getAllSchedule2(start,end, id);
 	}
 
 	public Collection<SubjectDTO> subjectList3(Model model, HttpServletRequest request) {
-		int count = memberDAO.getCount3();
+		HttpSession session = request.getSession(true);
+		String id = (String) session.getAttribute("studentId");
+		int count = memberDAO.getCount3(id);
 
 		Paging paging = new Paging();
 		String pageNum = request.getParameter("pageNum");
@@ -105,8 +110,7 @@ public class MemberService3 {
 		dto.setEnd(end);
 
 		request.setAttribute("pageIndexList", pageIndexList);
-		HttpSession session = request.getSession(true);
-		String id = (String) session.getAttribute("studentId");
+		
 		return memberDAO.getAllSchedule3(start,end, id);
 	}
 
