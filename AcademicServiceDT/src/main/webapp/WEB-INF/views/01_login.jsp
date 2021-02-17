@@ -132,7 +132,7 @@ button {
 					<!-- footer  -->
 					<div class="row">
 						<div class="col-md-12">
-							<jsp:include page="Footer.jsp"></jsp:include>
+							<jsp:include page="00_footer.jsp"></jsp:include>
 						</div>
 					</div>
 
