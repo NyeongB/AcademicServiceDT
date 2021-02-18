@@ -34,7 +34,7 @@ private MemberService2 memberService;
 		studentId = memberService.login2(request.getParameter("id"), request.getParameter("pw"));
 		if(studentName !=null){			
 			HttpSession session = request.getSession(true);
-		
+			
 			session.setAttribute("studentName", studentName);
 			session.setAttribute("studentId", studentId);
 
@@ -47,8 +47,13 @@ private MemberService2 memberService;
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(HttpServletRequest request,Model model){
 		HttpSession session = request.getSession(true);
-		session.setAttribute("studentName", null);
-		session.setAttribute("studentId", null);
+		session.invalidate();
+		//session.setAttribute("studentName", null);
+		//session.setAttribute("studentId", null);
+		
+		/*
+		로그아웃 세션 먹는게 userinfo에서만 되는게 이유를 찾는다.. 
+		 */
 		return "01_login";
 	}
 	
