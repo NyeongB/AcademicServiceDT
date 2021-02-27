@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.oopsw.dt.MemberDAO3"> 
+
+	<select id="getAllSchedule" resultType="com.oopsw.dt.SubjectDTO"> 
+	
+	<![CDATA[
+		SELECT *
+		FROM
+		(
+		SELECT DATA.*, ROWNUM AS RNUM FROM
+		(
+		SELECT subject_grade, category, subject_code, subject_name,
+		 professor_name, credit, subject_time, subject_place FROM subjects
+		 WHERE subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
+		 ORDER BY subject_grade, subject_name ASC
+		)DATA)
+		WHERE #{start} <= RNUM AND RNUM <= #{end}
+		]]>
+	
+	
+		
+	</select>
+	
+	<select id="getAllSchedule2" resultType="com.oopsw.dt.SubjectDTO"> 
+	
+	<![CDATA[
+		SELECT *
+		FROM
+		(
+		SELECT DATA.*, ROWNUM AS RNUM FROM
+		(
+		SELECT subject_grade, category, subject_code, subject_name,
+		 professor_name, credit, subject_time, subject_place FROM subjects 
+		 where category like '전공%' AND subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
+		 ORDER BY subject_grade, subject_name ASC
+		)DATA)
+		WHERE #{start} <= RNUM AND RNUM <= #{end}
+		]]>
+	
+	
+		
+	</select>
+	
+	<select id="getAllSchedule3" resultType="com.oopsw.dt.SubjectDTO"> 
+	
+	<![CDATA[
+		SELECT *
+		FROM
+		(
+		SELECT DATA.*, ROWNUM AS RNUM FROM
+		(
+		SELECT subject_grade, category, subject_code, subject_name,
+		 professor_name, credit, subject_time, subject_place FROM subjects where category like '교양%'
+		 AND subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
+		 ORDER BY subject_grade, subject_name ASC
+		)DATA)
+		WHERE #{start} <= RNUM AND RNUM <= #{end}
+		]]>
+	
+	
+		
+	</select>
+	
+	
+	<select id="getCount" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM subjects
+		WHERE subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
+	</select>
+	
+	<select id="getCount2" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM subjects where category like '전공%'
+		AND subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
+		 ORDER BY subject_grade ASC
+		
+	</select>
+	
+	<select id="getCount3" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM subjects where category like '교양%'
+		AND subject_code NOT IN (SELECT subject_code FROM registers WHERE student_id = #{studentId})
+		 ORDER BY subject_grade ASC
+		
+	</select>
+	
+	
+	<select id="idPhoneCheck" resultType="java.lang.String">
+		select student_id studentId from students where phone = #{phone} and student_name = #{name}
+	</select>
+	
+	
+	<select id="pwPhoneCheck" resultType="java.lang.String">
+		select password from students where phone = #{phone} and student_id = #{studentId}
+	</select>
+	
+	<insert id="insert">
+		insert into registers(register_code, subject_code, student_id, score, year, semester)
+		values(seq.NEXTVAL, #{subjectCode}, #{studentId}, null, '2021', '1')
+	</insert>
+	
+	<select id="myNum" resultType="java.lang.Integer">
+		SELECT NVL(SUM(CREDIT),0)
+			FROM registers r, subjects s
+			WHERE r.student_id = #{studentId} AND r.score is NULL AND r.subject_code = s.subject_code
+	</select>
+	
+	<select id="subjectNum" resultType="java.lang.Integer">
+		SELECT CREDIT
+			FROM subjects 
+			WHERE subject_code = #{subjectCode}
+	</select>
+	
+</mapper>
